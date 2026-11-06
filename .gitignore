@@ -1,0 +1,18 @@
+# Large raw and intermediate data (recreated by the scripts)
+data/raw/
+data/interim/
+data/output/villages_scored.csv
+
+# Run logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+~$*.pptx

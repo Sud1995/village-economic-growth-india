@@ -1,0 +1,3402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4e298cce738bcfc6fa558b546384377e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    <div style='position:fixed;bottom:24px;left:24px;z-index:9999;background:white;padding:10px 12px;border-radius:6px;font:13px Arial;color:#0b0b0b;box-shadow:0 1px 4px rgba(0,0,0,.2)'><b>Top 100 villages by growth type</b><div><span style='display:inline-block;width:10px;height:10px;border-radius:50%;background:#1baf7a;margin-right:6px'></span>Broad local growth (53)</div><div><span style='display:inline-block;width:10px;height:10px;border-radius:50%;background:#2a78d6;margin-right:6px'></span>Near a city (24)</div><div><span style='display:inline-block;width:10px;height:10px;border-radius:50%;background:#eb6834;margin-right:6px'></span>Large project (23)</div></div>
+    
+            <div class="folium-map" id="map_4e298cce738bcfc6fa558b546384377e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4e298cce738bcfc6fa558b546384377e = L.map(
+                "map_4e298cce738bcfc6fa558b546384377e",
+                {
+                    center: [22.5, 80.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4a60f258dc0fb2bc93e981066cc3071e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4a60f258dc0fb2bc93e981066cc3071e.addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+            var circle_marker_42e659be8e7a5a3619f305d980997502 = L.circleMarker(
+                [13.3044, 77.614],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_89339b7ca7568a708b65d969a1802e2d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d0c757a8e1f10920edafa1eb9c9cd691 = $(`<div id="html_d0c757a8e1f10920edafa1eb9c9cd691" style="width: 100.0%; height: 100.0%;"><b>#1 Chapparadahalli</b><br>Bangalore Rural, Karnataka<br>Score 99.9 &middot; stability 100%<br>New built-up 34.9 ha<br>Total light 4.6 &rarr; 90.7<br>Type: Large project</div>`)[0];
+                popup_89339b7ca7568a708b65d969a1802e2d.setContent(html_d0c757a8e1f10920edafa1eb9c9cd691);
+            
+        
+
+        circle_marker_42e659be8e7a5a3619f305d980997502.bindPopup(popup_89339b7ca7568a708b65d969a1802e2d)
+        ;
+
+        
+    
+    
+            circle_marker_42e659be8e7a5a3619f305d980997502.bindTooltip(
+                `<div>
+                     #1 Chapparadahalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39cdab552e5e40fd7dd880cb4bc86d1f = L.circleMarker(
+                [23.5866, 86.7283],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_cef26b0bbcb125c0191fdd8b16a2e3b9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ec2afeb0b9f7af31c82e3bf540a4f802 = $(`<div id="html_ec2afeb0b9f7af31c82e3bf540a4f802" style="width: 100.0%; height: 100.0%;"><b>#2 Lachhmanpur</b><br>Puruliya, West Bengal<br>Score 99.9 &middot; stability 100%<br>New built-up 77.4 ha<br>Total light 7.1 &rarr; 164.9<br>Type: Large project</div>`)[0];
+                popup_cef26b0bbcb125c0191fdd8b16a2e3b9.setContent(html_ec2afeb0b9f7af31c82e3bf540a4f802);
+            
+        
+
+        circle_marker_39cdab552e5e40fd7dd880cb4bc86d1f.bindPopup(popup_cef26b0bbcb125c0191fdd8b16a2e3b9)
+        ;
+
+        
+    
+    
+            circle_marker_39cdab552e5e40fd7dd880cb4bc86d1f.bindTooltip(
+                `<div>
+                     #2 Lachhmanpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d2779501957d82b409a61f426aee856 = L.circleMarker(
+                [28.1647, 77.6157],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_f00b5bae075ee12518bff0d90d1aa674 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_49946ccf53fbecd94c3e9050af7cc04c = $(`<div id="html_49946ccf53fbecd94c3e9050af7cc04c" style="width: 100.0%; height: 100.0%;"><b>#3 Banwari Bara</b><br>Gautam Buddha Nagar, Uttar Pradesh<br>Score 99.9 &middot; stability 100%<br>New built-up 43.0 ha<br>Total light 7.9 &rarr; 144.1<br>Type: Large project</div>`)[0];
+                popup_f00b5bae075ee12518bff0d90d1aa674.setContent(html_49946ccf53fbecd94c3e9050af7cc04c);
+            
+        
+
+        circle_marker_3d2779501957d82b409a61f426aee856.bindPopup(popup_f00b5bae075ee12518bff0d90d1aa674)
+        ;
+
+        
+    
+    
+            circle_marker_3d2779501957d82b409a61f426aee856.bindTooltip(
+                `<div>
+                     #3 Banwari Bara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_313b55dd86d2b460409dddf47f058ebc = L.circleMarker(
+                [13.2951, 77.6159],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_2942dccefcd3da81b52b69962730c8e4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3b1464a2d16555f9f227ec7b8fb60ccf = $(`<div id="html_3b1464a2d16555f9f227ec7b8fb60ccf" style="width: 100.0%; height: 100.0%;"><b>#4 Doddagollahalli</b><br>Bangalore Rural, Karnataka<br>Score 99.7 &middot; stability 100%<br>New built-up 74.2 ha<br>Total light 11.0 &rarr; 97.7<br>Type: Large project</div>`)[0];
+                popup_2942dccefcd3da81b52b69962730c8e4.setContent(html_3b1464a2d16555f9f227ec7b8fb60ccf);
+            
+        
+
+        circle_marker_313b55dd86d2b460409dddf47f058ebc.bindPopup(popup_2942dccefcd3da81b52b69962730c8e4)
+        ;
+
+        
+    
+    
+            circle_marker_313b55dd86d2b460409dddf47f058ebc.bindTooltip(
+                `<div>
+                     #4 Doddagollahalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1aa46a2149986de4e775b21288822575 = L.circleMarker(
+                [22.6118, 85.9176],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_f7822bae4f01d9674a2a47f151cc3c73 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3f968b4ea967d0d92ca70eff6bfb2ed8 = $(`<div id="html_3f968b4ea967d0d92ca70eff6bfb2ed8" style="width: 100.0%; height: 100.0%;"><b>#5 Kerki</b><br>Saraikela-Kharsawan, Jharkhand<br>Score 99.6 &middot; stability 99%<br>New built-up 30.0 ha<br>Total light 13.6 &rarr; 187.4<br>Type: Broad local growth</div>`)[0];
+                popup_f7822bae4f01d9674a2a47f151cc3c73.setContent(html_3f968b4ea967d0d92ca70eff6bfb2ed8);
+            
+        
+
+        circle_marker_1aa46a2149986de4e775b21288822575.bindPopup(popup_f7822bae4f01d9674a2a47f151cc3c73)
+        ;
+
+        
+    
+    
+            circle_marker_1aa46a2149986de4e775b21288822575.bindTooltip(
+                `<div>
+                     #5 Kerki
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e4cbdbd61a4fd7fda14691e9b44c496d = L.circleMarker(
+                [30.9408, 75.9939],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_0c808af715f7ea481c5b40f6d2563fd8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2f5432a5264ec6cbee17bc553de6914c = $(`<div id="html_2f5432a5264ec6cbee17bc553de6914c" style="width: 100.0%; height: 100.0%;"><b>#6 Bounker  (39)</b><br>Ludhiana, Punjab<br>Score 99.5 &middot; stability 100%<br>New built-up 61.2 ha<br>Total light 39.9 &rarr; 258.3<br>Type: Near a city</div>`)[0];
+                popup_0c808af715f7ea481c5b40f6d2563fd8.setContent(html_2f5432a5264ec6cbee17bc553de6914c);
+            
+        
+
+        circle_marker_e4cbdbd61a4fd7fda14691e9b44c496d.bindPopup(popup_0c808af715f7ea481c5b40f6d2563fd8)
+        ;
+
+        
+    
+    
+            circle_marker_e4cbdbd61a4fd7fda14691e9b44c496d.bindTooltip(
+                `<div>
+                     #6 Bounker  (39)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aeb789eb2a46aacac9105de4cd886044 = L.circleMarker(
+                [19.503, 82.2816],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_adecb695f5cf0f52c373edfedf16e909 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3a863852b7c45bbca5d038d0d00c9c00 = $(`<div id="html_3a863852b7c45bbca5d038d0d00c9c00" style="width: 100.0%; height: 100.0%;"><b>#7 Muliaguda</b><br>Nabarangapur, Odisha<br>Score 99.5 &middot; stability 97%<br>New built-up 21.1 ha<br>Total light 0.3 &rarr; 10.0<br>Type: Large project</div>`)[0];
+                popup_adecb695f5cf0f52c373edfedf16e909.setContent(html_3a863852b7c45bbca5d038d0d00c9c00);
+            
+        
+
+        circle_marker_aeb789eb2a46aacac9105de4cd886044.bindPopup(popup_adecb695f5cf0f52c373edfedf16e909)
+        ;
+
+        
+    
+    
+            circle_marker_aeb789eb2a46aacac9105de4cd886044.bindTooltip(
+                `<div>
+                     #7 Muliaguda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5274c7659889e94a9ebb4f39f2733abf = L.circleMarker(
+                [28.1747, 77.605],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_25e61bf5b8fd302fabba090fd4cae0f5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8d5ddabcec51d18bec46cb256d8c9695 = $(`<div id="html_8d5ddabcec51d18bec46cb256d8c9695" style="width: 100.0%; height: 100.0%;"><b>#8 Kishorpur</b><br>Gautam Buddha Nagar, Uttar Pradesh<br>Score 99.4 &middot; stability 97%<br>New built-up 47.4 ha<br>Total light 15.8 &rarr; 342.1<br>Type: Large project</div>`)[0];
+                popup_25e61bf5b8fd302fabba090fd4cae0f5.setContent(html_8d5ddabcec51d18bec46cb256d8c9695);
+            
+        
+
+        circle_marker_5274c7659889e94a9ebb4f39f2733abf.bindPopup(popup_25e61bf5b8fd302fabba090fd4cae0f5)
+        ;
+
+        
+    
+    
+            circle_marker_5274c7659889e94a9ebb4f39f2733abf.bindTooltip(
+                `<div>
+                     #8 Kishorpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5dbe38504fdf4b88e82220664089f352 = L.circleMarker(
+                [31.2593, 76.7022],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_c80e627f55ba5b26a35b42122dc830ef = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0fffc1fd8a758a41cb4cd9c5833d439e = $(`<div id="html_0fffc1fd8a758a41cb4cd9c5833d439e" style="width: 100.0%; height: 100.0%;"><b>#9 Samletu  (308)</b><br>Bilaspur, Himachal Pradesh<br>Score 99.4 &middot; stability 99%<br>New built-up 17.5 ha<br>Total light 1.6 &rarr; 16.2<br>Type: Large project</div>`)[0];
+                popup_c80e627f55ba5b26a35b42122dc830ef.setContent(html_0fffc1fd8a758a41cb4cd9c5833d439e);
+            
+        
+
+        circle_marker_5dbe38504fdf4b88e82220664089f352.bindPopup(popup_c80e627f55ba5b26a35b42122dc830ef)
+        ;
+
+        
+    
+    
+            circle_marker_5dbe38504fdf4b88e82220664089f352.bindTooltip(
+                `<div>
+                     #9 Samletu  (308)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e8cd1bcdb81ef3185e947f02d9346421 = L.circleMarker(
+                [12.2476, 79.6204],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_efd18c0b28dcb450dc2f6a951c311385 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c6e2901977faf73aa1c50ff4a0730647 = $(`<div id="html_c6e2901977faf73aa1c50ff4a0730647" style="width: 100.0%; height: 100.0%;"><b>#10 Palakuppam</b><br>Viluppuram, Tamil Nadu<br>Score 99.4 &middot; stability 100%<br>New built-up 106.3 ha<br>Total light 25.0 &rarr; 191.5<br>Type: Large project</div>`)[0];
+                popup_efd18c0b28dcb450dc2f6a951c311385.setContent(html_c6e2901977faf73aa1c50ff4a0730647);
+            
+        
+
+        circle_marker_e8cd1bcdb81ef3185e947f02d9346421.bindPopup(popup_efd18c0b28dcb450dc2f6a951c311385)
+        ;
+
+        
+    
+    
+            circle_marker_e8cd1bcdb81ef3185e947f02d9346421.bindTooltip(
+                `<div>
+                     #10 Palakuppam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8e1d492363f8cb1e680bdbed0afba74 = L.circleMarker(
+                [23.0958, 75.9414],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_811dcb53c41803bb876a4cccd3843f4e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a4387812c2fb6b8a333c7ec4ebcbbf27 = $(`<div id="html_a4387812c2fb6b8a333c7ec4ebcbbf27" style="width: 100.0%; height: 100.0%;"><b>#11 Gaowdi</b><br>Ujjain, Madhya Pradesh<br>Score 99.4 &middot; stability 94%<br>New built-up 76.4 ha<br>Total light 35.2 &rarr; 325.0<br>Type: Broad local growth</div>`)[0];
+                popup_811dcb53c41803bb876a4cccd3843f4e.setContent(html_a4387812c2fb6b8a333c7ec4ebcbbf27);
+            
+        
+
+        circle_marker_b8e1d492363f8cb1e680bdbed0afba74.bindPopup(popup_811dcb53c41803bb876a4cccd3843f4e)
+        ;
+
+        
+    
+    
+            circle_marker_b8e1d492363f8cb1e680bdbed0afba74.bindTooltip(
+                `<div>
+                     #11 Gaowdi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b2f6a1e986c50345dd6e62f99c5613a = L.circleMarker(
+                [21.6322, 82.0633],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_6fdfbd2917e4d2c7afde5aecdaa44528 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_815bd872cd00a11277bf0256d6858acc = $(`<div id="html_815bd872cd00a11277bf0256d6858acc" style="width: 100.0%; height: 100.0%;"><b>#12 Semaradih</b><br>Raipur, Chhattisgarh<br>Score 99.4 &middot; stability 99%<br>New built-up 80.0 ha<br>Total light 22.3 &rarr; 157.6<br>Type: Broad local growth</div>`)[0];
+                popup_6fdfbd2917e4d2c7afde5aecdaa44528.setContent(html_815bd872cd00a11277bf0256d6858acc);
+            
+        
+
+        circle_marker_3b2f6a1e986c50345dd6e62f99c5613a.bindPopup(popup_6fdfbd2917e4d2c7afde5aecdaa44528)
+        ;
+
+        
+    
+    
+            circle_marker_3b2f6a1e986c50345dd6e62f99c5613a.bindTooltip(
+                `<div>
+                     #12 Semaradih
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96b6515e622eea3395d56421b6ea0721 = L.circleMarker(
+                [25.9674, 72.1898],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_ed0d37ac92933aa225112864886da1d0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_347bf265056a0ff86ea579ab57986868 = $(`<div id="html_347bf265056a0ff86ea579ab57986868" style="width: 100.0%; height: 100.0%;"><b>#13 Sajiyali Roopji (Rajaberi)</b><br>Barmer, Rajasthan<br>Score 99.3 &middot; stability 99%<br>New built-up 452.7 ha<br>Total light 787.7 &rarr; 4106.1<br>Type: Large project</div>`)[0];
+                popup_ed0d37ac92933aa225112864886da1d0.setContent(html_347bf265056a0ff86ea579ab57986868);
+            
+        
+
+        circle_marker_96b6515e622eea3395d56421b6ea0721.bindPopup(popup_ed0d37ac92933aa225112864886da1d0)
+        ;
+
+        
+    
+    
+            circle_marker_96b6515e622eea3395d56421b6ea0721.bindTooltip(
+                `<div>
+                     #13 Sajiyali Roopji (Rajaberi)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3d01c350fd0a5252d6e6364f3dcbf340 = L.circleMarker(
+                [28.8209, 76.9298],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_2fbb0ae3a7827d5636fc825944583ff2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_507d438c1a08fa5995cbbe511056360f = $(`<div id="html_507d438c1a08fa5995cbbe511056360f" style="width: 100.0%; height: 100.0%;"><b>#14 Sahoti  (14R)</b><br>Sonipat, Haryana<br>Score 99.3 &middot; stability 99%<br>New built-up 161.7 ha<br>Total light 80.8 &rarr; 623.4<br>Type: Large project</div>`)[0];
+                popup_2fbb0ae3a7827d5636fc825944583ff2.setContent(html_507d438c1a08fa5995cbbe511056360f);
+            
+        
+
+        circle_marker_3d01c350fd0a5252d6e6364f3dcbf340.bindPopup(popup_2fbb0ae3a7827d5636fc825944583ff2)
+        ;
+
+        
+    
+    
+            circle_marker_3d01c350fd0a5252d6e6364f3dcbf340.bindTooltip(
+                `<div>
+                     #14 Sahoti  (14R)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_862518f40d8a801b46e7836eea3146f8 = L.circleMarker(
+                [28.8393, 76.9373],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_3546bb7ee77bb03058015f5f8dc93db7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c821d50b65a79b521faf8daea4de2cd4 = $(`<div id="html_c821d50b65a79b521faf8daea4de2cd4" style="width: 100.0%; height: 100.0%;"><b>#15 Kundal  (241)</b><br>Sonipat, Haryana<br>Score 99.3 &middot; stability 93%<br>New built-up 34.4 ha<br>Total light 28.5 &rarr; 244.6<br>Type: Broad local growth</div>`)[0];
+                popup_3546bb7ee77bb03058015f5f8dc93db7.setContent(html_c821d50b65a79b521faf8daea4de2cd4);
+            
+        
+
+        circle_marker_862518f40d8a801b46e7836eea3146f8.bindPopup(popup_3546bb7ee77bb03058015f5f8dc93db7)
+        ;
+
+        
+    
+    
+            circle_marker_862518f40d8a801b46e7836eea3146f8.bindTooltip(
+                `<div>
+                     #15 Kundal  (241)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2c62a6697d962b7b6ce123718fb735e = L.circleMarker(
+                [13.1922, 77.7868],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_3c6f9bd45560647d83a5c3ad00fef457 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_336a457b12a1cb031db76ede9c6c3d85 = $(`<div id="html_336a457b12a1cb031db76ede9c6c3d85" style="width: 100.0%; height: 100.0%;"><b>#16 Ramapura</b><br>Bangalore Rural, Karnataka<br>Score 99.3 &middot; stability 98%<br>New built-up 24.9 ha<br>Total light 8.1 &rarr; 51.8<br>Type: Large project</div>`)[0];
+                popup_3c6f9bd45560647d83a5c3ad00fef457.setContent(html_336a457b12a1cb031db76ede9c6c3d85);
+            
+        
+
+        circle_marker_e2c62a6697d962b7b6ce123718fb735e.bindPopup(popup_3c6f9bd45560647d83a5c3ad00fef457)
+        ;
+
+        
+    
+    
+            circle_marker_e2c62a6697d962b7b6ce123718fb735e.bindTooltip(
+                `<div>
+                     #16 Ramapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9d1b2325a5d85ca08687df0c07258632 = L.circleMarker(
+                [13.2223, 77.7804],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_5fd10ea105ea47cea9526387bbb9ddd1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_283d42f2cb711f3721582cb28bdc6885 = $(`<div id="html_283d42f2cb711f3721582cb28bdc6885" style="width: 100.0%; height: 100.0%;"><b>#17 Naganayakanahalli</b><br>Bangalore Rural, Karnataka<br>Score 99.3 &middot; stability 98%<br>New built-up 49.0 ha<br>Total light 14.1 &rarr; 131.8<br>Type: Near a city</div>`)[0];
+                popup_5fd10ea105ea47cea9526387bbb9ddd1.setContent(html_283d42f2cb711f3721582cb28bdc6885);
+            
+        
+
+        circle_marker_9d1b2325a5d85ca08687df0c07258632.bindPopup(popup_5fd10ea105ea47cea9526387bbb9ddd1)
+        ;
+
+        
+    
+    
+            circle_marker_9d1b2325a5d85ca08687df0c07258632.bindTooltip(
+                `<div>
+                     #17 Naganayakanahalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6223ed05b67a829bb2e0e229f2bfd89 = L.circleMarker(
+                [28.4888, 76.7846],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_474cb33877870f0cf029a8e8a690ddfd = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f8b8d05ea8188ec85cde17400ed34206 = $(`<div id="html_f8b8d05ea8188ec85cde17400ed34206" style="width: 100.0%; height: 100.0%;"><b>#18 Yaqubpur (82)</b><br>Jhajjar, Haryana<br>Score 99.2 &middot; stability 98%<br>New built-up 294.2 ha<br>Total light 130.4 &rarr; 647.2<br>Type: Large project</div>`)[0];
+                popup_474cb33877870f0cf029a8e8a690ddfd.setContent(html_f8b8d05ea8188ec85cde17400ed34206);
+            
+        
+
+        circle_marker_a6223ed05b67a829bb2e0e229f2bfd89.bindPopup(popup_474cb33877870f0cf029a8e8a690ddfd)
+        ;
+
+        
+    
+    
+            circle_marker_a6223ed05b67a829bb2e0e229f2bfd89.bindTooltip(
+                `<div>
+                     #18 Yaqubpur (82)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9595e187d0b19fe7883503450671aa70 = L.circleMarker(
+                [24.3192, 79.9654],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_43caebc4a531fdcd2bba726366dbc46c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b7f6e3c6c4d9975101abfb1a1df2aabc = $(`<div id="html_b7f6e3c6c4d9975101abfb1a1df2aabc" style="width: 100.0%; height: 100.0%;"><b>#19 Harduwaken</b><br>Panna, Madhya Pradesh<br>Score 99.2 &middot; stability 98%<br>New built-up 71.2 ha<br>Total light 20.6 &rarr; 147.6<br>Type: Broad local growth</div>`)[0];
+                popup_43caebc4a531fdcd2bba726366dbc46c.setContent(html_b7f6e3c6c4d9975101abfb1a1df2aabc);
+            
+        
+
+        circle_marker_9595e187d0b19fe7883503450671aa70.bindPopup(popup_43caebc4a531fdcd2bba726366dbc46c)
+        ;
+
+        
+    
+    
+            circle_marker_9595e187d0b19fe7883503450671aa70.bindTooltip(
+                `<div>
+                     #19 Harduwaken
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8fcab98b21381d8e90ac1512ec91afa = L.circleMarker(
+                [23.5758, 86.7268],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_d43c35e2e929e23964e00bc3b28295a6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b291c5d006ddd676e3372e5f289e742d = $(`<div id="html_b291c5d006ddd676e3372e5f289e742d" style="width: 100.0%; height: 100.0%;"><b>#20 Digardi</b><br>Puruliya, West Bengal<br>Score 99.1 &middot; stability 94%<br>New built-up 6.2 ha<br>Total light 1.4 &rarr; 11.5<br>Type: Broad local growth</div>`)[0];
+                popup_d43c35e2e929e23964e00bc3b28295a6.setContent(html_b291c5d006ddd676e3372e5f289e742d);
+            
+        
+
+        circle_marker_b8fcab98b21381d8e90ac1512ec91afa.bindPopup(popup_d43c35e2e929e23964e00bc3b28295a6)
+        ;
+
+        
+    
+    
+            circle_marker_b8fcab98b21381d8e90ac1512ec91afa.bindTooltip(
+                `<div>
+                     #20 Digardi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3b17bc3d226a134a7982b75badab6a2 = L.circleMarker(
+                [25.5264, 92.8094],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_fdc691435fc74e4d6fb0c5a7ddb8e36d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_801e1bfbeb74f262bd67d6cbc2687f5e = $(`<div id="html_801e1bfbeb74f262bd67d6cbc2687f5e" style="width: 100.0%; height: 100.0%;"><b>#21 New Sangbar</b><br>Dima Hasao, Assam<br>Score 99.1 &middot; stability 80%<br>New built-up 40.8 ha<br>Total light 1.5 &rarr; 188.0<br>Type: Large project</div>`)[0];
+                popup_fdc691435fc74e4d6fb0c5a7ddb8e36d.setContent(html_801e1bfbeb74f262bd67d6cbc2687f5e);
+            
+        
+
+        circle_marker_b3b17bc3d226a134a7982b75badab6a2.bindPopup(popup_fdc691435fc74e4d6fb0c5a7ddb8e36d)
+        ;
+
+        
+    
+    
+            circle_marker_b3b17bc3d226a134a7982b75badab6a2.bindTooltip(
+                `<div>
+                     #21 New Sangbar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0271c434d50ade6243a6a22f7e27519 = L.circleMarker(
+                [13.2287, 77.782],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_82e1cbb3c4d085b5c82be6ff3c80e869 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_05b8f8b6ae7d97084a0e64be308466cc = $(`<div id="html_05b8f8b6ae7d97084a0e64be308466cc" style="width: 100.0%; height: 100.0%;"><b>#22 Palya</b><br>Bangalore Rural, Karnataka<br>Score 99.1 &middot; stability 86%<br>New built-up 55.3 ha<br>Total light 15.9 &rarr; 235.9<br>Type: Near a city</div>`)[0];
+                popup_82e1cbb3c4d085b5c82be6ff3c80e869.setContent(html_05b8f8b6ae7d97084a0e64be308466cc);
+            
+        
+
+        circle_marker_b0271c434d50ade6243a6a22f7e27519.bindPopup(popup_82e1cbb3c4d085b5c82be6ff3c80e869)
+        ;
+
+        
+    
+    
+            circle_marker_b0271c434d50ade6243a6a22f7e27519.bindTooltip(
+                `<div>
+                     #22 Palya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7fbef9f291abbd80dde6fd68bec9a6f = L.circleMarker(
+                [25.9369, 72.1849],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_dc61a2e3ae9b4bc0454a0fd8790017ec = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b8a17decc73eeb5605e12ceff09c1e4d = $(`<div id="html_b8a17decc73eeb5605e12ceff09c1e4d" style="width: 100.0%; height: 100.0%;"><b>#23 Sambhra</b><br>Barmer, Rajasthan<br>Score 99.1 &middot; stability 93%<br>New built-up 509.6 ha<br>Total light 844.4 &rarr; 5531.7<br>Type: Large project</div>`)[0];
+                popup_dc61a2e3ae9b4bc0454a0fd8790017ec.setContent(html_b8a17decc73eeb5605e12ceff09c1e4d);
+            
+        
+
+        circle_marker_c7fbef9f291abbd80dde6fd68bec9a6f.bindPopup(popup_dc61a2e3ae9b4bc0454a0fd8790017ec)
+        ;
+
+        
+    
+    
+            circle_marker_c7fbef9f291abbd80dde6fd68bec9a6f.bindTooltip(
+                `<div>
+                     #23 Sambhra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1723378680ad115ffee7babd6f7ce99c = L.circleMarker(
+                [23.582, 86.7198],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_9542728b29f766aaf01d918f7e1f1e1c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d1dd535feb287f136840607c10d34a61 = $(`<div id="html_d1dd535feb287f136840607c10d34a61" style="width: 100.0%; height: 100.0%;"><b>#24 Shiulibari</b><br>Puruliya, West Bengal<br>Score 99.1 &middot; stability 87%<br>New built-up 11.0 ha<br>Total light 2.9 &rarr; 29.5<br>Type: Broad local growth</div>`)[0];
+                popup_9542728b29f766aaf01d918f7e1f1e1c.setContent(html_d1dd535feb287f136840607c10d34a61);
+            
+        
+
+        circle_marker_1723378680ad115ffee7babd6f7ce99c.bindPopup(popup_9542728b29f766aaf01d918f7e1f1e1c)
+        ;
+
+        
+    
+    
+            circle_marker_1723378680ad115ffee7babd6f7ce99c.bindTooltip(
+                `<div>
+                     #24 Shiulibari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51e90cd8bda0b7b17c0a56b0dcece4ad = L.circleMarker(
+                [24.3247, 79.9802],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_75185d85e5c54eaf2e277c3178a6bda7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_187c89e8187d26f5d75b050850d5aeaf = $(`<div id="html_187c89e8187d26f5d75b050850d5aeaf" style="width: 100.0%; height: 100.0%;"><b>#25 Sotipura</b><br>Panna, Madhya Pradesh<br>Score 99.0 &middot; stability 94%<br>New built-up 24.5 ha<br>Total light 7.2 &rarr; 90.9<br>Type: Broad local growth</div>`)[0];
+                popup_75185d85e5c54eaf2e277c3178a6bda7.setContent(html_187c89e8187d26f5d75b050850d5aeaf);
+            
+        
+
+        circle_marker_51e90cd8bda0b7b17c0a56b0dcece4ad.bindPopup(popup_75185d85e5c54eaf2e277c3178a6bda7)
+        ;
+
+        
+    
+    
+            circle_marker_51e90cd8bda0b7b17c0a56b0dcece4ad.bindTooltip(
+                `<div>
+                     #25 Sotipura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88f6d52f13f6f1b10ee02e9153abe6ba = L.circleMarker(
+                [13.1446, 77.8716],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_7603e76c65e045354fff9da231636bc5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5b91035db039a1b42916ac439ab41b38 = $(`<div id="html_5b91035db039a1b42916ac439ab41b38" style="width: 100.0%; height: 100.0%;"><b>#26 Doddenahalli</b><br>Bangalore Rural, Karnataka<br>Score 99.0 &middot; stability 98%<br>New built-up 29.4 ha<br>Total light 15.3 &rarr; 80.8<br>Type: Broad local growth</div>`)[0];
+                popup_7603e76c65e045354fff9da231636bc5.setContent(html_5b91035db039a1b42916ac439ab41b38);
+            
+        
+
+        circle_marker_88f6d52f13f6f1b10ee02e9153abe6ba.bindPopup(popup_7603e76c65e045354fff9da231636bc5)
+        ;
+
+        
+    
+    
+            circle_marker_88f6d52f13f6f1b10ee02e9153abe6ba.bindTooltip(
+                `<div>
+                     #26 Doddenahalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aab698857841061928262226293ffd7d = L.circleMarker(
+                [19.7631, 79.8107],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_4e20cb2cb720eef0324e748051bbbb5c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_510391d009e3096ac43267fc7f6912d5 = $(`<div id="html_510391d009e3096ac43267fc7f6912d5" style="width: 100.0%; height: 100.0%;"><b>#27 Konsari</b><br>Gadchiroli, Maharashtra<br>Score 99.0 &middot; stability 78%<br>New built-up 67.9 ha<br>Total light 7.8 &rarr; 403.8<br>Type: Large project</div>`)[0];
+                popup_4e20cb2cb720eef0324e748051bbbb5c.setContent(html_510391d009e3096ac43267fc7f6912d5);
+            
+        
+
+        circle_marker_aab698857841061928262226293ffd7d.bindPopup(popup_4e20cb2cb720eef0324e748051bbbb5c)
+        ;
+
+        
+    
+    
+            circle_marker_aab698857841061928262226293ffd7d.bindTooltip(
+                `<div>
+                     #27 Konsari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1f19ddd2b3468d9ccf700447fae5cbd7 = L.circleMarker(
+                [26.7117, 83.289],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_9fb4246a9702839c976a553cf141f049 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4db42877cbcea4a6602b4bbcc7dbaa8e = $(`<div id="html_4db42877cbcea4a6602b4bbcc7dbaa8e" style="width: 100.0%; height: 100.0%;"><b>#28 Narkatha</b><br>Gorakhpur, Uttar Pradesh<br>Score 98.9 &middot; stability 89%<br>New built-up 37.2 ha<br>Total light 13.8 &rarr; 53.9<br>Type: Near a city</div>`)[0];
+                popup_9fb4246a9702839c976a553cf141f049.setContent(html_4db42877cbcea4a6602b4bbcc7dbaa8e);
+            
+        
+
+        circle_marker_1f19ddd2b3468d9ccf700447fae5cbd7.bindPopup(popup_9fb4246a9702839c976a553cf141f049)
+        ;
+
+        
+    
+    
+            circle_marker_1f19ddd2b3468d9ccf700447fae5cbd7.bindTooltip(
+                `<div>
+                     #28 Narkatha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a743b5bab296598adf746294cddf801 = L.circleMarker(
+                [13.2066, 77.7671],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_6f451cb3ff16eb39067976bbcc94eb74 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7e47280cc52ce259b8b9dd8f523f3de4 = $(`<div id="html_7e47280cc52ce259b8b9dd8f523f3de4" style="width: 100.0%; height: 100.0%;"><b>#29 Nallappanahalli</b><br>Bangalore Rural, Karnataka<br>Score 98.9 &middot; stability 92%<br>New built-up 27.5 ha<br>Total light 14.8 &rarr; 70.7<br>Type: Near a city</div>`)[0];
+                popup_6f451cb3ff16eb39067976bbcc94eb74.setContent(html_7e47280cc52ce259b8b9dd8f523f3de4);
+            
+        
+
+        circle_marker_4a743b5bab296598adf746294cddf801.bindPopup(popup_6f451cb3ff16eb39067976bbcc94eb74)
+        ;
+
+        
+    
+    
+            circle_marker_4a743b5bab296598adf746294cddf801.bindTooltip(
+                `<div>
+                     #29 Nallappanahalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7ef2e36570db51d0875959c44138084d = L.circleMarker(
+                [19.2951, 84.919],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_0a675d20651599613a387c300d9ebe00 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_10e036134f4827dd00b3acf9dbd54cdf = $(`<div id="html_10e036134f4827dd00b3acf9dbd54cdf" style="width: 100.0%; height: 100.0%;"><b>#30 Kalipalli</b><br>Ganjam, Odisha<br>Score 98.8 &middot; stability 92%<br>New built-up 18.9 ha<br>Total light 8.8 &rarr; 49.7<br>Type: Near a city</div>`)[0];
+                popup_0a675d20651599613a387c300d9ebe00.setContent(html_10e036134f4827dd00b3acf9dbd54cdf);
+            
+        
+
+        circle_marker_7ef2e36570db51d0875959c44138084d.bindPopup(popup_0a675d20651599613a387c300d9ebe00)
+        ;
+
+        
+    
+    
+            circle_marker_7ef2e36570db51d0875959c44138084d.bindTooltip(
+                `<div>
+                     #30 Kalipalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_700ec8186f03c326ed45f17f8eb51451 = L.circleMarker(
+                [31.2674, 76.6944],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_d03deeceed1502c95451a87ac2bb4350 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d7bb509c1c6725d73d728dd1df571ac6 = $(`<div id="html_d7bb509c1c6725d73d728dd1df571ac6" style="width: 100.0%; height: 100.0%;"><b>#31 Jabal  (307)</b><br>Bilaspur, Himachal Pradesh<br>Score 98.8 &middot; stability 88%<br>New built-up 14.4 ha<br>Total light 1.9 &rarr; 15.6<br>Type: Broad local growth</div>`)[0];
+                popup_d03deeceed1502c95451a87ac2bb4350.setContent(html_d7bb509c1c6725d73d728dd1df571ac6);
+            
+        
+
+        circle_marker_700ec8186f03c326ed45f17f8eb51451.bindPopup(popup_d03deeceed1502c95451a87ac2bb4350)
+        ;
+
+        
+    
+    
+            circle_marker_700ec8186f03c326ed45f17f8eb51451.bindTooltip(
+                `<div>
+                     #31 Jabal  (307)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6240bb57e7e1154d4ec4cf4a22c15542 = L.circleMarker(
+                [31.2757, 76.7218],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_175600fe6d0295336a948ac8de441eb7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8d514f212ce719dfcb94b8e015122d5d = $(`<div id="html_8d514f212ce719dfcb94b8e015122d5d" style="width: 100.0%; height: 100.0%;"><b>#32 Tali  (298)</b><br>Bilaspur, Himachal Pradesh<br>Score 98.8 &middot; stability 80%<br>New built-up 32.9 ha<br>Total light 4.6 &rarr; 49.7<br>Type: Broad local growth</div>`)[0];
+                popup_175600fe6d0295336a948ac8de441eb7.setContent(html_8d514f212ce719dfcb94b8e015122d5d);
+            
+        
+
+        circle_marker_6240bb57e7e1154d4ec4cf4a22c15542.bindPopup(popup_175600fe6d0295336a948ac8de441eb7)
+        ;
+
+        
+    
+    
+            circle_marker_6240bb57e7e1154d4ec4cf4a22c15542.bindTooltip(
+                `<div>
+                     #32 Tali  (298)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_58384aa7bc4944928308e0d62260093c = L.circleMarker(
+                [18.6067, 72.9724],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_3d4eb6e5a5589ec4fa2274d7876ad9cf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4f5e2f316a7d453d23e1d3de389c25fb = $(`<div id="html_4f5e2f316a7d453d23e1d3de389c25fb" style="width: 100.0%; height: 100.0%;"><b>#33 Kune</b><br>Raigarh, Maharashtra<br>Score 98.8 &middot; stability 92%<br>New built-up 82.7 ha<br>Total light 43.0 &rarr; 223.0<br>Type: Broad local growth</div>`)[0];
+                popup_3d4eb6e5a5589ec4fa2274d7876ad9cf.setContent(html_4f5e2f316a7d453d23e1d3de389c25fb);
+            
+        
+
+        circle_marker_58384aa7bc4944928308e0d62260093c.bindPopup(popup_3d4eb6e5a5589ec4fa2274d7876ad9cf)
+        ;
+
+        
+    
+    
+            circle_marker_58384aa7bc4944928308e0d62260093c.bindTooltip(
+                `<div>
+                     #33 Kune
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55c1d1b90872eafbd044c3c19364ebbb = L.circleMarker(
+                [29.5043, 76.879],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_7d691f45f3a79b2e870a61875bba32e8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_77b98787baeac29bd517d968e2450505 = $(`<div id="html_77b98787baeac29bd517d968e2450505" style="width: 100.0%; height: 100.0%;"><b>#34 Kutana  (26)</b><br>Karnal, Haryana<br>Score 98.8 &middot; stability 90%<br>New built-up 63.2 ha<br>Total light 102.4 &rarr; 507.2<br>Type: Broad local growth</div>`)[0];
+                popup_7d691f45f3a79b2e870a61875bba32e8.setContent(html_77b98787baeac29bd517d968e2450505);
+            
+        
+
+        circle_marker_55c1d1b90872eafbd044c3c19364ebbb.bindPopup(popup_7d691f45f3a79b2e870a61875bba32e8)
+        ;
+
+        
+    
+    
+            circle_marker_55c1d1b90872eafbd044c3c19364ebbb.bindTooltip(
+                `<div>
+                     #34 Kutana  (26)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90264aa8ec7d0e10c60da38cb663e7e7 = L.circleMarker(
+                [18.3836, 82.9682],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_940ee6e06158c286361596807487e40d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f2595398fc5dc84955555f7b5696db9b = $(`<div id="html_f2595398fc5dc84955555f7b5696db9b" style="width: 100.0%; height: 100.0%;"><b>#35 Tologolluru  (Talagoluru)</b><br>Koraput, Odisha<br>Score 98.8 &middot; stability 63%<br>New built-up 34.9 ha<br>Total light 0.0 &rarr; 22.3<br>Type: Broad local growth</div>`)[0];
+                popup_940ee6e06158c286361596807487e40d.setContent(html_f2595398fc5dc84955555f7b5696db9b);
+            
+        
+
+        circle_marker_90264aa8ec7d0e10c60da38cb663e7e7.bindPopup(popup_940ee6e06158c286361596807487e40d)
+        ;
+
+        
+    
+    
+            circle_marker_90264aa8ec7d0e10c60da38cb663e7e7.bindTooltip(
+                `<div>
+                     #35 Tologolluru  (Talagoluru)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed049c5d903745dc5b963682d4158cc6 = L.circleMarker(
+                [21.7831, 72.8149],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_13b09a545338efa6486976a8857c13b1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a65533e471edabe10421d5625cb438fc = $(`<div id="html_a65533e471edabe10421d5625cb438fc" style="width: 100.0%; height: 100.0%;"><b>#36 Sayakha</b><br>Bharuch, Gujarat<br>Score 98.8 &middot; stability 91%<br>New built-up 334.8 ha<br>Total light 220.9 &rarr; 1056.9<br>Type: Large project</div>`)[0];
+                popup_13b09a545338efa6486976a8857c13b1.setContent(html_a65533e471edabe10421d5625cb438fc);
+            
+        
+
+        circle_marker_ed049c5d903745dc5b963682d4158cc6.bindPopup(popup_13b09a545338efa6486976a8857c13b1)
+        ;
+
+        
+    
+    
+            circle_marker_ed049c5d903745dc5b963682d4158cc6.bindTooltip(
+                `<div>
+                     #36 Sayakha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fe6198c6afde3a6bd7efddc1309fa29 = L.circleMarker(
+                [24.3536, 75.6886],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_5ede052f7cad983e2e3d1a29a07579ae = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_eb0889d5369da5051c700ca1220187dc = $(`<div id="html_eb0889d5369da5051c700ca1220187dc" style="width: 100.0%; height: 100.0%;"><b>#37 Jodmi</b><br>Mandsaur, Madhya Pradesh<br>Score 98.7 &middot; stability 71%<br>New built-up 22.3 ha<br>Total light 16.5 &rarr; 183.6<br>Type: Broad local growth</div>`)[0];
+                popup_5ede052f7cad983e2e3d1a29a07579ae.setContent(html_eb0889d5369da5051c700ca1220187dc);
+            
+        
+
+        circle_marker_1fe6198c6afde3a6bd7efddc1309fa29.bindPopup(popup_5ede052f7cad983e2e3d1a29a07579ae)
+        ;
+
+        
+    
+    
+            circle_marker_1fe6198c6afde3a6bd7efddc1309fa29.bindTooltip(
+                `<div>
+                     #37 Jodmi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7a7a9dc77771966cfbf72c68bab0e30 = L.circleMarker(
+                [23.6742, 87.1282],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_b6881ec434f2aab61fc2e42641fc0df5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0f5881b79d7bc3d49e6a78abedd492d0 = $(`<div id="html_0f5881b79d7bc3d49e6a78abedd492d0" style="width: 100.0%; height: 100.0%;"><b>#38 Jote Janaki</b><br>Barddhaman, West Bengal<br>Score 98.7 &middot; stability 86%<br>New built-up 92.3 ha<br>Total light 70.4 &rarr; 373.7<br>Type: Near a city</div>`)[0];
+                popup_b6881ec434f2aab61fc2e42641fc0df5.setContent(html_0f5881b79d7bc3d49e6a78abedd492d0);
+            
+        
+
+        circle_marker_d7a7a9dc77771966cfbf72c68bab0e30.bindPopup(popup_b6881ec434f2aab61fc2e42641fc0df5)
+        ;
+
+        
+    
+    
+            circle_marker_d7a7a9dc77771966cfbf72c68bab0e30.bindTooltip(
+                `<div>
+                     #38 Jote Janaki
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7632d624034d903858b39e5b8041712 = L.circleMarker(
+                [18.5911, 72.9758],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_ff6f99950115871e8c2c57a5b3864137 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d1e23c633965f2c19235e6293e874250 = $(`<div id="html_d1e23c633965f2c19235e6293e874250" style="width: 100.0%; height: 100.0%;"><b>#39 Malyan</b><br>Raigarh, Maharashtra<br>Score 98.7 &middot; stability 85%<br>New built-up 36.5 ha<br>Total light 13.9 &rarr; 85.6<br>Type: Broad local growth</div>`)[0];
+                popup_ff6f99950115871e8c2c57a5b3864137.setContent(html_d1e23c633965f2c19235e6293e874250);
+            
+        
+
+        circle_marker_d7632d624034d903858b39e5b8041712.bindPopup(popup_ff6f99950115871e8c2c57a5b3864137)
+        ;
+
+        
+    
+    
+            circle_marker_d7632d624034d903858b39e5b8041712.bindTooltip(
+                `<div>
+                     #39 Malyan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e74807a44467a0f64f05062748972c5f = L.circleMarker(
+                [22.3298, 87.4019],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_f4f9ed32693a12fd7a0acd770b584320 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_95646cddcfa66f8b7c65077ecacbd38b = $(`<div id="html_95646cddcfa66f8b7c65077ecacbd38b" style="width: 100.0%; height: 100.0%;"><b>#40 Jethia</b><br>Paschim Medinipur, West Bengal<br>Score 98.7 &middot; stability 76%<br>New built-up 20.8 ha<br>Total light 8.8 &rarr; 143.8<br>Type: Near a city</div>`)[0];
+                popup_f4f9ed32693a12fd7a0acd770b584320.setContent(html_95646cddcfa66f8b7c65077ecacbd38b);
+            
+        
+
+        circle_marker_e74807a44467a0f64f05062748972c5f.bindPopup(popup_f4f9ed32693a12fd7a0acd770b584320)
+        ;
+
+        
+    
+    
+            circle_marker_e74807a44467a0f64f05062748972c5f.bindTooltip(
+                `<div>
+                     #40 Jethia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2dcffb2dfcbb7bf987e54a2ca813781 = L.circleMarker(
+                [25.4643, 86.04],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_7acb268ad5182d9a85c3f633137a2aa4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1462a2300b55d4487cf967234cfe95ba = $(`<div id="html_1462a2300b55d4487cf967234cfe95ba" style="width: 100.0%; height: 100.0%;"><b>#41 Pipraur</b><br>Begusarai, Bihar<br>Score 98.7 &middot; stability 84%<br>New built-up 59.3 ha<br>Total light 21.8 &rarr; 100.6<br>Type: Large project</div>`)[0];
+                popup_7acb268ad5182d9a85c3f633137a2aa4.setContent(html_1462a2300b55d4487cf967234cfe95ba);
+            
+        
+
+        circle_marker_d2dcffb2dfcbb7bf987e54a2ca813781.bindPopup(popup_7acb268ad5182d9a85c3f633137a2aa4)
+        ;
+
+        
+    
+    
+            circle_marker_d2dcffb2dfcbb7bf987e54a2ca813781.bindTooltip(
+                `<div>
+                     #41 Pipraur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e50890eec02c47853f8f2b4909aeaed3 = L.circleMarker(
+                [25.9465, 89.9953],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_e0f57b2d839c04ab49e95f1addffe411 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4d65c24e80accd1cc003db90bbf85d07 = $(`<div id="html_4d65c24e80accd1cc003db90bbf85d07" style="width: 100.0%; height: 100.0%;"><b>#42 Baushkata Pt.IV</b><br>Dhubri, Assam<br>Score 98.7 &middot; stability 59%<br>New built-up 34.2 ha<br>Total light 0.0 &rarr; 23.0<br>Type: Broad local growth</div>`)[0];
+                popup_e0f57b2d839c04ab49e95f1addffe411.setContent(html_4d65c24e80accd1cc003db90bbf85d07);
+            
+        
+
+        circle_marker_e50890eec02c47853f8f2b4909aeaed3.bindPopup(popup_e0f57b2d839c04ab49e95f1addffe411)
+        ;
+
+        
+    
+    
+            circle_marker_e50890eec02c47853f8f2b4909aeaed3.bindTooltip(
+                `<div>
+                     #42 Baushkata Pt.IV
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9ea93903d15b9b47d1c683b32dc32e8 = L.circleMarker(
+                [24.506, 84.2507],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_8b4e79ac7be35f8ae6164814db66a3ec = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d5d469d5354f602fe97b8bcf1b884b14 = $(`<div id="html_d5d469d5354f602fe97b8bcf1b884b14" style="width: 100.0%; height: 100.0%;"><b>#43 Bhandar</b><br>Palamu, Jharkhand<br>Score 98.7 &middot; stability 81%<br>New built-up 13.7 ha<br>Total light 2.5 &rarr; 16.1<br>Type: Broad local growth</div>`)[0];
+                popup_8b4e79ac7be35f8ae6164814db66a3ec.setContent(html_d5d469d5354f602fe97b8bcf1b884b14);
+            
+        
+
+        circle_marker_d9ea93903d15b9b47d1c683b32dc32e8.bindPopup(popup_8b4e79ac7be35f8ae6164814db66a3ec)
+        ;
+
+        
+    
+    
+            circle_marker_d9ea93903d15b9b47d1c683b32dc32e8.bindTooltip(
+                `<div>
+                     #43 Bhandar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0778074c454f13e6455eefce209cbb4e = L.circleMarker(
+                [20.9213, 84.9892],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_6e640c755194ea5dbf49be01b9f43e5e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4147c89ed3825bd72b068e85310995a4 = $(`<div id="html_4147c89ed3825bd72b068e85310995a4" style="width: 100.0%; height: 100.0%;"><b>#44 Malibrahmani</b><br>Anugul, Odisha<br>Score 98.6 &middot; stability 68%<br>New built-up 68.7 ha<br>Total light 36.4 &rarr; 383.5<br>Type: Broad local growth</div>`)[0];
+                popup_6e640c755194ea5dbf49be01b9f43e5e.setContent(html_4147c89ed3825bd72b068e85310995a4);
+            
+        
+
+        circle_marker_0778074c454f13e6455eefce209cbb4e.bindPopup(popup_6e640c755194ea5dbf49be01b9f43e5e)
+        ;
+
+        
+    
+    
+            circle_marker_0778074c454f13e6455eefce209cbb4e.bindTooltip(
+                `<div>
+                     #44 Malibrahmani
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_944f3c13e254807408132680cb37ee29 = L.circleMarker(
+                [24.3582, 84.1917],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_b8c436b5ddc738a0f8ce4248b977cb4a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2951e3a7f5dc1b8c650f180124eec0fa = $(`<div id="html_2951e3a7f5dc1b8c650f180124eec0fa" style="width: 100.0%; height: 100.0%;"><b>#45 Chhatarpur</b><br>Palamu, Jharkhand<br>Score 98.6 &middot; stability 75%<br>New built-up 41.5 ha<br>Total light 15.6 &rarr; 87.5<br>Type: Broad local growth</div>`)[0];
+                popup_b8c436b5ddc738a0f8ce4248b977cb4a.setContent(html_2951e3a7f5dc1b8c650f180124eec0fa);
+            
+        
+
+        circle_marker_944f3c13e254807408132680cb37ee29.bindPopup(popup_b8c436b5ddc738a0f8ce4248b977cb4a)
+        ;
+
+        
+    
+    
+            circle_marker_944f3c13e254807408132680cb37ee29.bindTooltip(
+                `<div>
+                     #45 Chhatarpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3f2c851079109698c8ff5f5b8a22d3f = L.circleMarker(
+                [20.2347, 85.7101],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_94c34f6052bb5b57548d8b93829b3350 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3c170c49d51b6c1d0fd5b1426306b6c5 = $(`<div id="html_3c170c49d51b6c1d0fd5b1426306b6c5" style="width: 100.0%; height: 100.0%;"><b>#46 Harapur</b><br>Khordha, Odisha<br>Score 98.6 &middot; stability 81%<br>New built-up 39.1 ha<br>Total light 24.7 &rarr; 105.0<br>Type: Near a city</div>`)[0];
+                popup_94c34f6052bb5b57548d8b93829b3350.setContent(html_3c170c49d51b6c1d0fd5b1426306b6c5);
+            
+        
+
+        circle_marker_d3f2c851079109698c8ff5f5b8a22d3f.bindPopup(popup_94c34f6052bb5b57548d8b93829b3350)
+        ;
+
+        
+    
+    
+            circle_marker_d3f2c851079109698c8ff5f5b8a22d3f.bindTooltip(
+                `<div>
+                     #46 Harapur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c55484d27745b8bdd97b9e8a40a24791 = L.circleMarker(
+                [27.3897, 80.9172],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_367f7e2689667321b243945864259399 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6aa8b28c63fe3294d62b3cc164a98354 = $(`<div id="html_6aa8b28c63fe3294d62b3cc164a98354" style="width: 100.0%; height: 100.0%;"><b>#47 Kanduni</b><br>Sitapur, Uttar Pradesh<br>Score 98.5 &middot; stability 63%<br>New built-up 48.0 ha<br>Total light 15.6 &rarr; 180.0<br>Type: Broad local growth</div>`)[0];
+                popup_367f7e2689667321b243945864259399.setContent(html_6aa8b28c63fe3294d62b3cc164a98354);
+            
+        
+
+        circle_marker_c55484d27745b8bdd97b9e8a40a24791.bindPopup(popup_367f7e2689667321b243945864259399)
+        ;
+
+        
+    
+    
+            circle_marker_c55484d27745b8bdd97b9e8a40a24791.bindTooltip(
+                `<div>
+                     #47 Kanduni
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9efb73634604fe22a8eb6f6794469c5e = L.circleMarker(
+                [31.2401, 77.2099],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_1d1c2c50b85ad5308c7ebdc0e8e0ba88 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_372b30f8e8813c8df1c071b06312d3fd = $(`<div id="html_372b30f8e8813c8df1c071b06312d3fd" style="width: 100.0%; height: 100.0%;"><b>#48 Khaira  (104)</b><br>Shimla, Himachal Pradesh<br>Score 98.5 &middot; stability 55%<br>New built-up 10.3 ha<br>Total light 0.0 &rarr; 16.0<br>Type: Near a city</div>`)[0];
+                popup_1d1c2c50b85ad5308c7ebdc0e8e0ba88.setContent(html_372b30f8e8813c8df1c071b06312d3fd);
+            
+        
+
+        circle_marker_9efb73634604fe22a8eb6f6794469c5e.bindPopup(popup_1d1c2c50b85ad5308c7ebdc0e8e0ba88)
+        ;
+
+        
+    
+    
+            circle_marker_9efb73634604fe22a8eb6f6794469c5e.bindTooltip(
+                `<div>
+                     #48 Khaira  (104)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a8a381e0fc1f365265470489301cee00 = L.circleMarker(
+                [27.1854, 75.512],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_b15669c4678e793d58c91c7aad6ccf11 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2b89c9ddac8871b1251d8191084072ec = $(`<div id="html_2b89c9ddac8871b1251d8191084072ec" style="width: 100.0%; height: 100.0%;"><b>#49 Doongri Khurd</b><br>Jaipur, Rajasthan<br>Score 98.5 &middot; stability 66%<br>New built-up 49.0 ha<br>Total light 29.0 &rarr; 231.3<br>Type: Broad local growth</div>`)[0];
+                popup_b15669c4678e793d58c91c7aad6ccf11.setContent(html_2b89c9ddac8871b1251d8191084072ec);
+            
+        
+
+        circle_marker_a8a381e0fc1f365265470489301cee00.bindPopup(popup_b15669c4678e793d58c91c7aad6ccf11)
+        ;
+
+        
+    
+    
+            circle_marker_a8a381e0fc1f365265470489301cee00.bindTooltip(
+                `<div>
+                     #49 Doongri Khurd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3502f84dbbb544d8bea56439995a9768 = L.circleMarker(
+                [25.2961, 82.8555],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_0e62bb9ce38a1abd3359d910ea970b5a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0c87947a34e439b6cf6f90807af13957 = $(`<div id="html_0c87947a34e439b6cf6f90807af13957" style="width: 100.0%; height: 100.0%;"><b>#50 Bhaudpur</b><br>Varanasi, Uttar Pradesh<br>Score 98.4 &middot; stability 69%<br>New built-up 22.9 ha<br>Total light 6.5 &rarr; 33.3<br>Type: Large project</div>`)[0];
+                popup_0e62bb9ce38a1abd3359d910ea970b5a.setContent(html_0c87947a34e439b6cf6f90807af13957);
+            
+        
+
+        circle_marker_3502f84dbbb544d8bea56439995a9768.bindPopup(popup_0e62bb9ce38a1abd3359d910ea970b5a)
+        ;
+
+        
+    
+    
+            circle_marker_3502f84dbbb544d8bea56439995a9768.bindTooltip(
+                `<div>
+                     #50 Bhaudpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fece87079332c12e66cda085fb65258f = L.circleMarker(
+                [23.5703, 87.0409],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_d2408e883e864be798ca37f695245dc8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7a1be5195f8ad8d7ab09d9215224f529 = $(`<div id="html_7a1be5195f8ad8d7ab09d9215224f529" style="width: 100.0%; height: 100.0%;"><b>#51 Mohana</b><br>Bankura, West Bengal<br>Score 98.4 &middot; stability 66%<br>New built-up 19.9 ha<br>Total light 10.5 &rarr; 65.7<br>Type: Near a city</div>`)[0];
+                popup_d2408e883e864be798ca37f695245dc8.setContent(html_7a1be5195f8ad8d7ab09d9215224f529);
+            
+        
+
+        circle_marker_fece87079332c12e66cda085fb65258f.bindPopup(popup_d2408e883e864be798ca37f695245dc8)
+        ;
+
+        
+    
+    
+            circle_marker_fece87079332c12e66cda085fb65258f.bindTooltip(
+                `<div>
+                     #51 Mohana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f33eee8cb36a3096bf13f25738ddd89e = L.circleMarker(
+                [30.146, 77.4649],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_4637f93e5cd2b2ad38052c4c7fdd777b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_06010c437c9f89357922639ad4988113 = $(`<div id="html_06010c437c9f89357922639ad4988113" style="width: 100.0%; height: 100.0%;"><b>#52 Allahanpur Must.</b><br>Saharanpur, Uttar Pradesh<br>Score 98.4 &middot; stability 65%<br>New built-up 17.2 ha<br>Total light 5.5 &rarr; 33.5<br>Type: Broad local growth</div>`)[0];
+                popup_4637f93e5cd2b2ad38052c4c7fdd777b.setContent(html_06010c437c9f89357922639ad4988113);
+            
+        
+
+        circle_marker_f33eee8cb36a3096bf13f25738ddd89e.bindPopup(popup_4637f93e5cd2b2ad38052c4c7fdd777b)
+        ;
+
+        
+    
+    
+            circle_marker_f33eee8cb36a3096bf13f25738ddd89e.bindTooltip(
+                `<div>
+                     #52 Allahanpur Must.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_de7b0a469eff4ed54e44f71bc0dbf667 = L.circleMarker(
+                [26.7499, 83.1543],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_5d484f2359e7419618e822de095e47af = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0d017d7b7056de46d5a3f7a7ccfd4b1b = $(`<div id="html_0d017d7b7056de46d5a3f7a7ccfd4b1b" style="width: 100.0%; height: 100.0%;"><b>#53 Kashroul</b><br>Gorakhpur, Uttar Pradesh<br>Score 98.4 &middot; stability 73%<br>New built-up 27.8 ha<br>Total light 15.5 &rarr; 52.6<br>Type: Near a city</div>`)[0];
+                popup_5d484f2359e7419618e822de095e47af.setContent(html_0d017d7b7056de46d5a3f7a7ccfd4b1b);
+            
+        
+
+        circle_marker_de7b0a469eff4ed54e44f71bc0dbf667.bindPopup(popup_5d484f2359e7419618e822de095e47af)
+        ;
+
+        
+    
+    
+            circle_marker_de7b0a469eff4ed54e44f71bc0dbf667.bindTooltip(
+                `<div>
+                     #53 Kashroul
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c28ee8730b5b3eab35b06ad33aa938c2 = L.circleMarker(
+                [28.2219, 77.587],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_62bc40259ef0cdf870afdc090e264388 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4eaa626ce6b5a495b6c127b0a7fa0691 = $(`<div id="html_4eaa626ce6b5a495b6c127b0a7fa0691" style="width: 100.0%; height: 100.0%;"><b>#54 Tirthali</b><br>Gautam Buddha Nagar, Uttar Pradesh<br>Score 98.4 &middot; stability 67%<br>New built-up 76.3 ha<br>Total light 34.3 &rarr; 207.5<br>Type: Broad local growth</div>`)[0];
+                popup_62bc40259ef0cdf870afdc090e264388.setContent(html_4eaa626ce6b5a495b6c127b0a7fa0691);
+            
+        
+
+        circle_marker_c28ee8730b5b3eab35b06ad33aa938c2.bindPopup(popup_62bc40259ef0cdf870afdc090e264388)
+        ;
+
+        
+    
+    
+            circle_marker_c28ee8730b5b3eab35b06ad33aa938c2.bindTooltip(
+                `<div>
+                     #54 Tirthali
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8c19b14cfd1853f507a3210ff8bac57 = L.circleMarker(
+                [28.6902, 78.074],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_8a20717779d92f173bb4e894fc98a53e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c151046f0a7b34ee5b924ab0b77c1949 = $(`<div id="html_c151046f0a7b34ee5b924ab0b77c1949" style="width: 100.0%; height: 100.0%;"><b>#55 Chuchawali</b><br>Ghaziabad, Uttar Pradesh<br>Score 98.4 &middot; stability 70%<br>New built-up 28.4 ha<br>Total light 4.9 &rarr; 27.4<br>Type: Large project</div>`)[0];
+                popup_8a20717779d92f173bb4e894fc98a53e.setContent(html_c151046f0a7b34ee5b924ab0b77c1949);
+            
+        
+
+        circle_marker_f8c19b14cfd1853f507a3210ff8bac57.bindPopup(popup_8a20717779d92f173bb4e894fc98a53e)
+        ;
+
+        
+    
+    
+            circle_marker_f8c19b14cfd1853f507a3210ff8bac57.bindTooltip(
+                `<div>
+                     #55 Chuchawali
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c6a01eb689ec2864eed0a525150dbdf = L.circleMarker(
+                [26.2893, 85.0809],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_ceef0665ff5f86830a03696bad53f411 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_61782998156d1f63b17e1716c1c95f8c = $(`<div id="html_61782998156d1f63b17e1716c1c95f8c" style="width: 100.0%; height: 100.0%;"><b>#56 Damodarpur</b><br>Muzaffarpur, Bihar<br>Score 98.4 &middot; stability 66%<br>New built-up 73.1 ha<br>Total light 14.2 &rarr; 78.1<br>Type: Broad local growth</div>`)[0];
+                popup_ceef0665ff5f86830a03696bad53f411.setContent(html_61782998156d1f63b17e1716c1c95f8c);
+            
+        
+
+        circle_marker_6c6a01eb689ec2864eed0a525150dbdf.bindPopup(popup_ceef0665ff5f86830a03696bad53f411)
+        ;
+
+        
+    
+    
+            circle_marker_6c6a01eb689ec2864eed0a525150dbdf.bindTooltip(
+                `<div>
+                     #56 Damodarpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aef9792b6c3e7443247821e850015b62 = L.circleMarker(
+                [13.8578, 75.6063],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_f91adcd9182237e56920e298e7faf554 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3451940b8ebf1b2bc49fec83ae96e272 = $(`<div id="html_3451940b8ebf1b2bc49fec83ae96e272" style="width: 100.0%; height: 100.0%;"><b>#57 Somenakoppa</b><br>Shimoga, Karnataka<br>Score 98.4 &middot; stability 69%<br>New built-up 7.9 ha<br>Total light 2.4 &rarr; 10.5<br>Type: Near a city</div>`)[0];
+                popup_f91adcd9182237e56920e298e7faf554.setContent(html_3451940b8ebf1b2bc49fec83ae96e272);
+            
+        
+
+        circle_marker_aef9792b6c3e7443247821e850015b62.bindPopup(popup_f91adcd9182237e56920e298e7faf554)
+        ;
+
+        
+    
+    
+            circle_marker_aef9792b6c3e7443247821e850015b62.bindTooltip(
+                `<div>
+                     #57 Somenakoppa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_798bfe3855fbee5924dfe595ecbbb40b = L.circleMarker(
+                [26.6042, 76.2685],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_beb6e21d3a7182039a1330c845646d89 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4e1a317bb426d45e85bd3d1e0bd0a7ee = $(`<div id="html_4e1a317bb426d45e85bd3d1e0bd0a7ee" style="width: 100.0%; height: 100.0%;"><b>#58 Amarabad</b><br>Dausa, Rajasthan<br>Score 98.4 &middot; stability 67%<br>New built-up 51.4 ha<br>Total light 19.9 &rarr; 106.2<br>Type: Broad local growth</div>`)[0];
+                popup_beb6e21d3a7182039a1330c845646d89.setContent(html_4e1a317bb426d45e85bd3d1e0bd0a7ee);
+            
+        
+
+        circle_marker_798bfe3855fbee5924dfe595ecbbb40b.bindPopup(popup_beb6e21d3a7182039a1330c845646d89)
+        ;
+
+        
+    
+    
+            circle_marker_798bfe3855fbee5924dfe595ecbbb40b.bindTooltip(
+                `<div>
+                     #58 Amarabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_344944df10b6763bda18da7be1a7fb88 = L.circleMarker(
+                [29.1033, 78.4563],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_0d40a8dc982f4cfc673348d94a4d5161 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5502599ea0eed468d29f024d43eb12ee = $(`<div id="html_5502599ea0eed468d29f024d43eb12ee" style="width: 100.0%; height: 100.0%;"><b>#59 Adampur Kakbara</b><br>Bijnor, Uttar Pradesh<br>Score 98.3 &middot; stability 59%<br>New built-up 7.7 ha<br>Total light 4.3 &rarr; 27.5<br>Type: Broad local growth</div>`)[0];
+                popup_0d40a8dc982f4cfc673348d94a4d5161.setContent(html_5502599ea0eed468d29f024d43eb12ee);
+            
+        
+
+        circle_marker_344944df10b6763bda18da7be1a7fb88.bindPopup(popup_0d40a8dc982f4cfc673348d94a4d5161)
+        ;
+
+        
+    
+    
+            circle_marker_344944df10b6763bda18da7be1a7fb88.bindTooltip(
+                `<div>
+                     #59 Adampur Kakbara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0b427aa65a9d84ce1bc1d6f5d430039 = L.circleMarker(
+                [24.3489, 75.6716],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_96d93db9d463bf2e5a8aaee34d0a5f4a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a8c30a9c0848066c70c2ce47b355b8fc = $(`<div id="html_a8c30a9c0848066c70c2ce47b355b8fc" style="width: 100.0%; height: 100.0%;"><b>#60 Kundalya Charandas</b><br>Mandsaur, Madhya Pradesh<br>Score 98.3 &middot; stability 61%<br>New built-up 21.6 ha<br>Total light 16.5 &rarr; 93.8<br>Type: Broad local growth</div>`)[0];
+                popup_96d93db9d463bf2e5a8aaee34d0a5f4a.setContent(html_a8c30a9c0848066c70c2ce47b355b8fc);
+            
+        
+
+        circle_marker_f0b427aa65a9d84ce1bc1d6f5d430039.bindPopup(popup_96d93db9d463bf2e5a8aaee34d0a5f4a)
+        ;
+
+        
+    
+    
+            circle_marker_f0b427aa65a9d84ce1bc1d6f5d430039.bindTooltip(
+                `<div>
+                     #60 Kundalya Charandas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec1a0c25b655fe3d46cbfc96d485cd53 = L.circleMarker(
+                [30.9498, 75.975],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_7e362832d62a42b6ac1ab675870e4527 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_66f0f1989f59d935e87d52bdda9b210a = $(`<div id="html_66f0f1989f59d935e87d52bdda9b210a" style="width: 100.0%; height: 100.0%;"><b>#61 Kariana Kalan  (54)</b><br>Ludhiana, Punjab<br>Score 98.3 &middot; stability 60%<br>New built-up 35.7 ha<br>Total light 39.6 &rarr; 213.0<br>Type: Near a city</div>`)[0];
+                popup_7e362832d62a42b6ac1ab675870e4527.setContent(html_66f0f1989f59d935e87d52bdda9b210a);
+            
+        
+
+        circle_marker_ec1a0c25b655fe3d46cbfc96d485cd53.bindPopup(popup_7e362832d62a42b6ac1ab675870e4527)
+        ;
+
+        
+    
+    
+            circle_marker_ec1a0c25b655fe3d46cbfc96d485cd53.bindTooltip(
+                `<div>
+                     #61 Kariana Kalan  (54)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc3e79ebb83d8b410b050b638ad36d25 = L.circleMarker(
+                [21.8088, 72.8639],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_1a5db19a28a137ac9bcc09901d8c87d3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c266c3d45e507620b3079dbdb6cd4195 = $(`<div id="html_c266c3d45e507620b3079dbdb6cd4195" style="width: 100.0%; height: 100.0%;"><b>#62 Juned</b><br>Bharuch, Gujarat<br>Score 98.3 &middot; stability 56%<br>New built-up 56.9 ha<br>Total light 53.3 &rarr; 245.5<br>Type: Broad local growth</div>`)[0];
+                popup_1a5db19a28a137ac9bcc09901d8c87d3.setContent(html_c266c3d45e507620b3079dbdb6cd4195);
+            
+        
+
+        circle_marker_cc3e79ebb83d8b410b050b638ad36d25.bindPopup(popup_1a5db19a28a137ac9bcc09901d8c87d3)
+        ;
+
+        
+    
+    
+            circle_marker_cc3e79ebb83d8b410b050b638ad36d25.bindTooltip(
+                `<div>
+                     #62 Juned
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18a0786d09b7cb9de41b6258c5e0b6cc = L.circleMarker(
+                [31.0288, 76.6835],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_050fcf0331ddc376d2dbe81efb814f54 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fe74c1ca20401ddd15b6b832327c10d6 = $(`<div id="html_fe74c1ca20401ddd15b6b832327c10d6" style="width: 100.0%; height: 100.0%;"><b>#63 Thanthewal  (125)</b><br>Solan, Himachal Pradesh<br>Score 98.3 &middot; stability 57%<br>New built-up 13.8 ha<br>Total light 8.5 &rarr; 33.0<br>Type: Broad local growth</div>`)[0];
+                popup_050fcf0331ddc376d2dbe81efb814f54.setContent(html_fe74c1ca20401ddd15b6b832327c10d6);
+            
+        
+
+        circle_marker_18a0786d09b7cb9de41b6258c5e0b6cc.bindPopup(popup_050fcf0331ddc376d2dbe81efb814f54)
+        ;
+
+        
+    
+    
+            circle_marker_18a0786d09b7cb9de41b6258c5e0b6cc.bindTooltip(
+                `<div>
+                     #63 Thanthewal  (125)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90ca805fb0b2c4f519de90b18709ccf8 = L.circleMarker(
+                [22.3671, 87.2792],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_98411a24ede187db705bd204647470eb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ff0a45699b83dd898b40749b35c77e1d = $(`<div id="html_ff0a45699b83dd898b40749b35c77e1d" style="width: 100.0%; height: 100.0%;"><b>#64 Srirampur Jia</b><br>Paschim Medinipur, West Bengal<br>Score 98.2 &middot; stability 63%<br>New built-up 14.3 ha<br>Total light 26.2 &rarr; 91.6<br>Type: Near a city</div>`)[0];
+                popup_98411a24ede187db705bd204647470eb.setContent(html_ff0a45699b83dd898b40749b35c77e1d);
+            
+        
+
+        circle_marker_90ca805fb0b2c4f519de90b18709ccf8.bindPopup(popup_98411a24ede187db705bd204647470eb)
+        ;
+
+        
+    
+    
+            circle_marker_90ca805fb0b2c4f519de90b18709ccf8.bindTooltip(
+                `<div>
+                     #64 Srirampur Jia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b4c712ec782ab05cb5c660884f8e6cf = L.circleMarker(
+                [17.4483, 77.3944],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_40a1e63ced62d93e7aa7c0e36440ffa0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_945ce7ae3c636a0341453b74a0cd82e3 = $(`<div id="html_945ce7ae3c636a0341453b74a0cd82e3" style="width: 100.0%; height: 100.0%;"><b>#65 Daultapur</b><br>Gulbarga, Karnataka<br>Score 98.2 &middot; stability 43%<br>New built-up 46.7 ha<br>Total light 10.9 &rarr; 59.8<br>Type: Broad local growth</div>`)[0];
+                popup_40a1e63ced62d93e7aa7c0e36440ffa0.setContent(html_945ce7ae3c636a0341453b74a0cd82e3);
+            
+        
+
+        circle_marker_6b4c712ec782ab05cb5c660884f8e6cf.bindPopup(popup_40a1e63ced62d93e7aa7c0e36440ffa0)
+        ;
+
+        
+    
+    
+            circle_marker_6b4c712ec782ab05cb5c660884f8e6cf.bindTooltip(
+                `<div>
+                     #65 Daultapur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c7373ebdb8b97d6ef9b3debe32a9c9b = L.circleMarker(
+                [24.4793, 88.0295],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_5e09810daef07e0fa66ef8a7dde13613 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2f159e96e81d5ea15fac7985634c7658 = $(`<div id="html_2f159e96e81d5ea15fac7985634c7658" style="width: 100.0%; height: 100.0%;"><b>#66 Loharapara</b><br>Murshidabad, West Bengal<br>Score 98.2 &middot; stability 50%<br>New built-up 9.4 ha<br>Total light 4.1 &rarr; 29.8<br>Type: Broad local growth</div>`)[0];
+                popup_5e09810daef07e0fa66ef8a7dde13613.setContent(html_2f159e96e81d5ea15fac7985634c7658);
+            
+        
+
+        circle_marker_5c7373ebdb8b97d6ef9b3debe32a9c9b.bindPopup(popup_5e09810daef07e0fa66ef8a7dde13613)
+        ;
+
+        
+    
+    
+            circle_marker_5c7373ebdb8b97d6ef9b3debe32a9c9b.bindTooltip(
+                `<div>
+                     #66 Loharapara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be3e854538f4c44623fcc274681cd7a0 = L.circleMarker(
+                [29.3219, 78.5109],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_014ff9554078b2d2ea2c4ae9b32bbff5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_70ee22ea2190acfdca93d1d690bdce8d = $(`<div id="html_70ee22ea2190acfdca93d1d690bdce8d" style="width: 100.0%; height: 100.0%;"><b>#67 Nabada</b><br>Bijnor, Uttar Pradesh<br>Score 98.2 &middot; stability 70%<br>New built-up 7.9 ha<br>Total light 4.0 &rarr; 15.7<br>Type: Broad local growth</div>`)[0];
+                popup_014ff9554078b2d2ea2c4ae9b32bbff5.setContent(html_70ee22ea2190acfdca93d1d690bdce8d);
+            
+        
+
+        circle_marker_be3e854538f4c44623fcc274681cd7a0.bindPopup(popup_014ff9554078b2d2ea2c4ae9b32bbff5)
+        ;
+
+        
+    
+    
+            circle_marker_be3e854538f4c44623fcc274681cd7a0.bindTooltip(
+                `<div>
+                     #67 Nabada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c54a7aa130569a36959b83bb12e34a33 = L.circleMarker(
+                [21.9395, 85.2943],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_3a43ded4667b0f9861ef872e15357250 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4374d6c3dea76a9dd0f4e274563bb090 = $(`<div id="html_4374d6c3dea76a9dd0f4e274563bb090" style="width: 100.0%; height: 100.0%;"><b>#68 Adaghat</b><br>Sundargarh, Odisha<br>Score 98.2 &middot; stability 57%<br>New built-up 24.7 ha<br>Total light 80.2 &rarr; 630.8<br>Type: Broad local growth</div>`)[0];
+                popup_3a43ded4667b0f9861ef872e15357250.setContent(html_4374d6c3dea76a9dd0f4e274563bb090);
+            
+        
+
+        circle_marker_c54a7aa130569a36959b83bb12e34a33.bindPopup(popup_3a43ded4667b0f9861ef872e15357250)
+        ;
+
+        
+    
+    
+            circle_marker_c54a7aa130569a36959b83bb12e34a33.bindTooltip(
+                `<div>
+                     #68 Adaghat
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2cb156d4a6302b850cd745f20bfea7c1 = L.circleMarker(
+                [13.2584, 77.9219],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_bb9bdabbcb483674a9e682f78f39beb2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6945d3d6fcf11ed562a613e71988531d = $(`<div id="html_6945d3d6fcf11ed562a613e71988531d" style="width: 100.0%; height: 100.0%;"><b>#69 Thimmasandra</b><br>Chikkaballapura, Karnataka<br>Score 98.2 &middot; stability 46%<br>New built-up 15.6 ha<br>Total light 8.6 &rarr; 43.9<br>Type: Broad local growth</div>`)[0];
+                popup_bb9bdabbcb483674a9e682f78f39beb2.setContent(html_6945d3d6fcf11ed562a613e71988531d);
+            
+        
+
+        circle_marker_2cb156d4a6302b850cd745f20bfea7c1.bindPopup(popup_bb9bdabbcb483674a9e682f78f39beb2)
+        ;
+
+        
+    
+    
+            circle_marker_2cb156d4a6302b850cd745f20bfea7c1.bindTooltip(
+                `<div>
+                     #69 Thimmasandra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_342b0e4432250f159453a90a7970a7db = L.circleMarker(
+                [29.1025, 78.4445],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_f1040c8adb720d71b81b22e40b062a9f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3606c7b980227e4ba44f0f5fcbff7cde = $(`<div id="html_3606c7b980227e4ba44f0f5fcbff7cde" style="width: 100.0%; height: 100.0%;"><b>#70 Changipur</b><br>Bijnor, Uttar Pradesh<br>Score 98.2 &middot; stability 45%<br>New built-up 34.4 ha<br>Total light 14.2 &rarr; 93.4<br>Type: Broad local growth</div>`)[0];
+                popup_f1040c8adb720d71b81b22e40b062a9f.setContent(html_3606c7b980227e4ba44f0f5fcbff7cde);
+            
+        
+
+        circle_marker_342b0e4432250f159453a90a7970a7db.bindPopup(popup_f1040c8adb720d71b81b22e40b062a9f)
+        ;
+
+        
+    
+    
+            circle_marker_342b0e4432250f159453a90a7970a7db.bindTooltip(
+                `<div>
+                     #70 Changipur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3492747856b036c277e06e06b4c1188c = L.circleMarker(
+                [22.0119, 84.0267],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_b5a906aadaf802d52bed1cbcd068d142 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d6a5e04991fc0cf912a3a6396ad31b02 = $(`<div id="html_d6a5e04991fc0cf912a3a6396ad31b02" style="width: 100.0%; height: 100.0%;"><b>#71 Podabahal</b><br>Sundargarh, Odisha<br>Score 98.2 &middot; stability 45%<br>New built-up 22.1 ha<br>Total light 15.2 &rarr; 71.1<br>Type: Broad local growth</div>`)[0];
+                popup_b5a906aadaf802d52bed1cbcd068d142.setContent(html_d6a5e04991fc0cf912a3a6396ad31b02);
+            
+        
+
+        circle_marker_3492747856b036c277e06e06b4c1188c.bindPopup(popup_b5a906aadaf802d52bed1cbcd068d142)
+        ;
+
+        
+    
+    
+            circle_marker_3492747856b036c277e06e06b4c1188c.bindTooltip(
+                `<div>
+                     #71 Podabahal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1259d10acdec3c46b4b0d6c4fc57e71d = L.circleMarker(
+                [13.2814, 77.6116],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_2a71f91623bde3617de5c06c1f883e74 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_dd46c211e59e68a9b942e4f67606c7a7 = $(`<div id="html_dd46c211e59e68a9b942e4f67606c7a7" style="width: 100.0%; height: 100.0%;"><b>#72 Beerasandra</b><br>Bangalore Rural, Karnataka<br>Score 98.2 &middot; stability 54%<br>New built-up 52.3 ha<br>Total light 27.7 &rarr; 189.7<br>Type: Near a city</div>`)[0];
+                popup_2a71f91623bde3617de5c06c1f883e74.setContent(html_dd46c211e59e68a9b942e4f67606c7a7);
+            
+        
+
+        circle_marker_1259d10acdec3c46b4b0d6c4fc57e71d.bindPopup(popup_2a71f91623bde3617de5c06c1f883e74)
+        ;
+
+        
+    
+    
+            circle_marker_1259d10acdec3c46b4b0d6c4fc57e71d.bindTooltip(
+                `<div>
+                     #72 Beerasandra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2775f0e40139419968ea1749c54fbed6 = L.circleMarker(
+                [24.0118, 82.3961],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_982d123bf5c82cc13af58e5aa22b6d9a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_906584f623936e72d3932ab73863f93f = $(`<div id="html_906584f623936e72d3932ab73863f93f" style="width: 100.0%; height: 100.0%;"><b>#73 Semua</b><br>Singrauli, Madhya Pradesh<br>Score 98.2 &middot; stability 55%<br>New built-up 59.7 ha<br>Total light 39.4 &rarr; 146.5<br>Type: Broad local growth</div>`)[0];
+                popup_982d123bf5c82cc13af58e5aa22b6d9a.setContent(html_906584f623936e72d3932ab73863f93f);
+            
+        
+
+        circle_marker_2775f0e40139419968ea1749c54fbed6.bindPopup(popup_982d123bf5c82cc13af58e5aa22b6d9a)
+        ;
+
+        
+    
+    
+            circle_marker_2775f0e40139419968ea1749c54fbed6.bindTooltip(
+                `<div>
+                     #73 Semua
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_db99a3ae55a4b1df48e09aebb0d2d878 = L.circleMarker(
+                [13.5035, 76.0685],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_c7ba5444743f7937893507ac68b5f656 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0e46ecf53bfeed7e29d69d37859dc34e = $(`<div id="html_0e46ecf53bfeed7e29d69d37859dc34e" style="width: 100.0%; height: 100.0%;"><b>#74 Vaderahalli</b><br>Chikmagalur, Karnataka<br>Score 98.2 &middot; stability 51%<br>New built-up 13.5 ha<br>Total light 10.1 &rarr; 58.7<br>Type: Broad local growth</div>`)[0];
+                popup_c7ba5444743f7937893507ac68b5f656.setContent(html_0e46ecf53bfeed7e29d69d37859dc34e);
+            
+        
+
+        circle_marker_db99a3ae55a4b1df48e09aebb0d2d878.bindPopup(popup_c7ba5444743f7937893507ac68b5f656)
+        ;
+
+        
+    
+    
+            circle_marker_db99a3ae55a4b1df48e09aebb0d2d878.bindTooltip(
+                `<div>
+                     #74 Vaderahalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_48a2f63e051382f1069eff110681e597 = L.circleMarker(
+                [27.1562, 73.0077],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_4eef488bcb5e4b5489ca56c9abf6903d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b71ca0d8e20d720aead9ce4a4c1e4752 = $(`<div id="html_b71ca0d8e20d720aead9ce4a4c1e4752" style="width: 100.0%; height: 100.0%;"><b>#75 Ramdeopura</b><br>Jodhpur, Rajasthan<br>Score 98.2 &middot; stability 45%<br>New built-up 91.9 ha<br>Total light 46.6 &rarr; 259.0<br>Type: Broad local growth</div>`)[0];
+                popup_4eef488bcb5e4b5489ca56c9abf6903d.setContent(html_b71ca0d8e20d720aead9ce4a4c1e4752);
+            
+        
+
+        circle_marker_48a2f63e051382f1069eff110681e597.bindPopup(popup_4eef488bcb5e4b5489ca56c9abf6903d)
+        ;
+
+        
+    
+    
+            circle_marker_48a2f63e051382f1069eff110681e597.bindTooltip(
+                `<div>
+                     #75 Ramdeopura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0cc73acf8e493d4b78fcef94c9d0cc4d = L.circleMarker(
+                [26.1762, 81.6834],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_82827dd2f068d20de193fb65a6fdefb7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_829704da08ba132fb022b011080ecee6 = $(`<div id="html_829704da08ba132fb022b011080ecee6" style="width: 100.0%; height: 100.0%;"><b>#76 Palia</b><br>Sultanpur, Uttar Pradesh<br>Score 98.2 &middot; stability 47%<br>New built-up 5.5 ha<br>Total light 3.6 &rarr; 19.2<br>Type: Broad local growth</div>`)[0];
+                popup_82827dd2f068d20de193fb65a6fdefb7.setContent(html_829704da08ba132fb022b011080ecee6);
+            
+        
+
+        circle_marker_0cc73acf8e493d4b78fcef94c9d0cc4d.bindPopup(popup_82827dd2f068d20de193fb65a6fdefb7)
+        ;
+
+        
+    
+    
+            circle_marker_0cc73acf8e493d4b78fcef94c9d0cc4d.bindTooltip(
+                `<div>
+                     #76 Palia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_681b27094dcc21786181b20b132ccf4d = L.circleMarker(
+                [20.3127, 86.4723],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_a2088ef40a9b8be42910cd96def1bcc8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c4b05e50dd7a61e1877b68fa03788234 = $(`<div id="html_c4b05e50dd7a61e1877b68fa03788234" style="width: 100.0%; height: 100.0%;"><b>#77 Paramanandapur</b><br>Jagatsinghapur, Odisha<br>Score 98.2 &middot; stability 44%<br>New built-up 8.6 ha<br>Total light 2.9 &rarr; 14.9<br>Type: Broad local growth</div>`)[0];
+                popup_a2088ef40a9b8be42910cd96def1bcc8.setContent(html_c4b05e50dd7a61e1877b68fa03788234);
+            
+        
+
+        circle_marker_681b27094dcc21786181b20b132ccf4d.bindPopup(popup_a2088ef40a9b8be42910cd96def1bcc8)
+        ;
+
+        
+    
+    
+            circle_marker_681b27094dcc21786181b20b132ccf4d.bindTooltip(
+                `<div>
+                     #77 Paramanandapur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bf2666c7dd2165290323053f5486776 = L.circleMarker(
+                [22.36, 87.2766],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_4e6c51ef2d68c891e0f6a6915810c644 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e5b59d1d5576f7c079c3b66a5944cf71 = $(`<div id="html_e5b59d1d5576f7c079c3b66a5944cf71" style="width: 100.0%; height: 100.0%;"><b>#78 Kantagerya</b><br>Paschim Medinipur, West Bengal<br>Score 98.1 &middot; stability 67%<br>New built-up 7.3 ha<br>Total light 4.7 &rarr; 15.5<br>Type: Near a city</div>`)[0];
+                popup_4e6c51ef2d68c891e0f6a6915810c644.setContent(html_e5b59d1d5576f7c079c3b66a5944cf71);
+            
+        
+
+        circle_marker_5bf2666c7dd2165290323053f5486776.bindPopup(popup_4e6c51ef2d68c891e0f6a6915810c644)
+        ;
+
+        
+    
+    
+            circle_marker_5bf2666c7dd2165290323053f5486776.bindTooltip(
+                `<div>
+                     #78 Kantagerya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_800efb1a1b3666e83d49b85bff8ec4d5 = L.circleMarker(
+                [32.3192, 75.5102],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_205c0bec4f38b21645441f8541338b51 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_57174c7cff01bb6c9551a855d8f085ed = $(`<div id="html_57174c7cff01bb6c9551a855d8f085ed" style="width: 100.0%; height: 100.0%;"><b>#79 Gandial</b><br>Kathua, Jammu and Kashmir<br>Score 98.1 &middot; stability 45%<br>New built-up 87.5 ha<br>Total light 56.7 &rarr; 335.8<br>Type: Near a city</div>`)[0];
+                popup_205c0bec4f38b21645441f8541338b51.setContent(html_57174c7cff01bb6c9551a855d8f085ed);
+            
+        
+
+        circle_marker_800efb1a1b3666e83d49b85bff8ec4d5.bindPopup(popup_205c0bec4f38b21645441f8541338b51)
+        ;
+
+        
+    
+    
+            circle_marker_800efb1a1b3666e83d49b85bff8ec4d5.bindTooltip(
+                `<div>
+                     #79 Gandial
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ee0d1c431728755c190e98278c76fe14 = L.circleMarker(
+                [33.1697, 75.8118],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_9ef80a0bb562f499175c7eafda3ee60b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f5d13685dac55addc1990f3ccfbba893 = $(`<div id="html_f5d13685dac55addc1990f3ccfbba893" style="width: 100.0%; height: 100.0%;"><b>#80 Jushana</b><br>Kishtwar, Jammu and Kashmir<br>Score 98.1 &middot; stability 43%<br>New built-up 46.2 ha<br>Total light 7.7 &rarr; 67.5<br>Type: Broad local growth</div>`)[0];
+                popup_9ef80a0bb562f499175c7eafda3ee60b.setContent(html_f5d13685dac55addc1990f3ccfbba893);
+            
+        
+
+        circle_marker_ee0d1c431728755c190e98278c76fe14.bindPopup(popup_9ef80a0bb562f499175c7eafda3ee60b)
+        ;
+
+        
+    
+    
+            circle_marker_ee0d1c431728755c190e98278c76fe14.bindTooltip(
+                `<div>
+                     #80 Jushana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8c282384b19278ef6ea7997d42e4fddb = L.circleMarker(
+                [26.9583, 76.496],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_8e31c51bbf99723a444c0eeb717a0604 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_90e98600e4ec5d796e3a9a52795b76f0 = $(`<div id="html_90e98600e4ec5d796e3a9a52795b76f0" style="width: 100.0%; height: 100.0%;"><b>#81 Dhigariya Tappa Koleshwar</b><br>Dausa, Rajasthan<br>Score 98.1 &middot; stability 42%<br>New built-up 42.5 ha<br>Total light 33.2 &rarr; 167.9<br>Type: Broad local growth</div>`)[0];
+                popup_8e31c51bbf99723a444c0eeb717a0604.setContent(html_90e98600e4ec5d796e3a9a52795b76f0);
+            
+        
+
+        circle_marker_8c282384b19278ef6ea7997d42e4fddb.bindPopup(popup_8e31c51bbf99723a444c0eeb717a0604)
+        ;
+
+        
+    
+    
+            circle_marker_8c282384b19278ef6ea7997d42e4fddb.bindTooltip(
+                `<div>
+                     #81 Dhigariya Tappa Koleshwar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7e5bf623be9545f88fd43c90e7bd5f87 = L.circleMarker(
+                [21.5408, 70.6161],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_9907b6937fcc6fa915ba55b40c9fa22a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d0e3e39d327bd995103850d143963435 = $(`<div id="html_d0e3e39d327bd995103850d143963435" style="width: 100.0%; height: 100.0%;"><b>#82 Patwad</b><br>Junagadh, Gujarat<br>Score 98.1 &middot; stability 41%<br>New built-up 37.7 ha<br>Total light 9.2 &rarr; 66.4<br>Type: Broad local growth</div>`)[0];
+                popup_9907b6937fcc6fa915ba55b40c9fa22a.setContent(html_d0e3e39d327bd995103850d143963435);
+            
+        
+
+        circle_marker_7e5bf623be9545f88fd43c90e7bd5f87.bindPopup(popup_9907b6937fcc6fa915ba55b40c9fa22a)
+        ;
+
+        
+    
+    
+            circle_marker_7e5bf623be9545f88fd43c90e7bd5f87.bindTooltip(
+                `<div>
+                     #82 Patwad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7969e8bfb8a7ce44e43d5d80accf7320 = L.circleMarker(
+                [17.9251, 79.6937],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_2304160d50123c19e4d37a6e69ffc4b4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c9e2e3b754efe2c20ec0426d3d29028f = $(`<div id="html_c9e2e3b754efe2c20ec0426d3d29028f" style="width: 100.0%; height: 100.0%;"><b>#83 Shayampet</b><br>Warangal, Andhra Pradesh<br>Score 98.1 &middot; stability 32%<br>New built-up 135.5 ha<br>Total light 78.7 &rarr; 374.4<br>Type: Large project</div>`)[0];
+                popup_2304160d50123c19e4d37a6e69ffc4b4.setContent(html_c9e2e3b754efe2c20ec0426d3d29028f);
+            
+        
+
+        circle_marker_7969e8bfb8a7ce44e43d5d80accf7320.bindPopup(popup_2304160d50123c19e4d37a6e69ffc4b4)
+        ;
+
+        
+    
+    
+            circle_marker_7969e8bfb8a7ce44e43d5d80accf7320.bindTooltip(
+                `<div>
+                     #83 Shayampet
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_524bbcc17b3323cd89d6468950eac459 = L.circleMarker(
+                [20.913, 85.1755],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_fe05cf8ebfbb3a8004e17913169a502e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_261ce4a720cd4f6262bc8b965360c989 = $(`<div id="html_261ce4a720cd4f6262bc8b965360c989" style="width: 100.0%; height: 100.0%;"><b>#84 F.C.I. Township</b><br>Anugul, Odisha<br>Score 98.1 &middot; stability 63%<br>New built-up 144.8 ha<br>Total light 125.6 &rarr; 387.8<br>Type: Large project</div>`)[0];
+                popup_fe05cf8ebfbb3a8004e17913169a502e.setContent(html_261ce4a720cd4f6262bc8b965360c989);
+            
+        
+
+        circle_marker_524bbcc17b3323cd89d6468950eac459.bindPopup(popup_fe05cf8ebfbb3a8004e17913169a502e)
+        ;
+
+        
+    
+    
+            circle_marker_524bbcc17b3323cd89d6468950eac459.bindTooltip(
+                `<div>
+                     #84 F.C.I. Township
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_192688d372a61a04cf1ed76897ff1874 = L.circleMarker(
+                [29.1779, 76.7461],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_72bf559e314b3cb0ad35ce38eb2d1cb7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b213753377b259e13f36ba1a27c73f44 = $(`<div id="html_b213753377b259e13f36ba1a27c73f44" style="width: 100.0%; height: 100.0%;"><b>#85 Kailana Taluka Mahmudpur  (43)</b><br>Sonipat, Haryana<br>Score 98.0 &middot; stability 44%<br>New built-up 39.8 ha<br>Total light 22.1 &rarr; 106.6<br>Type: Broad local growth</div>`)[0];
+                popup_72bf559e314b3cb0ad35ce38eb2d1cb7.setContent(html_b213753377b259e13f36ba1a27c73f44);
+            
+        
+
+        circle_marker_192688d372a61a04cf1ed76897ff1874.bindPopup(popup_72bf559e314b3cb0ad35ce38eb2d1cb7)
+        ;
+
+        
+    
+    
+            circle_marker_192688d372a61a04cf1ed76897ff1874.bindTooltip(
+                `<div>
+                     #85 Kailana Taluka Mahmudpur  (43)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cfd46b1a9dcd2e682b592226de7f1c61 = L.circleMarker(
+                [25.9613, 89.9873],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_3ec38938c72a1c8b1841db96bd59ce8c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6e5784c4bddfbec02d3abba55678dc46 = $(`<div id="html_6e5784c4bddfbec02d3abba55678dc46" style="width: 100.0%; height: 100.0%;"><b>#86 Katiaralga  (Katiartol)</b><br>Dhubri, Assam<br>Score 98.0 &middot; stability 38%<br>New built-up 19.2 ha<br>Total light 0.0 &rarr; 36.8<br>Type: Broad local growth</div>`)[0];
+                popup_3ec38938c72a1c8b1841db96bd59ce8c.setContent(html_6e5784c4bddfbec02d3abba55678dc46);
+            
+        
+
+        circle_marker_cfd46b1a9dcd2e682b592226de7f1c61.bindPopup(popup_3ec38938c72a1c8b1841db96bd59ce8c)
+        ;
+
+        
+    
+    
+            circle_marker_cfd46b1a9dcd2e682b592226de7f1c61.bindTooltip(
+                `<div>
+                     #86 Katiaralga  (Katiartol)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba17246e20b1d69f67623161887e9552 = L.circleMarker(
+                [20.7973, 78.3674],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_ebbfc2e46fd9cef241b2f88ec604b26c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a27c1288f3ca9711db3a082a96d08004 = $(`<div id="html_a27c1288f3ca9711db3a082a96d08004" style="width: 100.0%; height: 100.0%;"><b>#87 Renkapur</b><br>Wardha, Maharashtra<br>Score 98.0 &middot; stability 48%<br>New built-up 13.7 ha<br>Total light 14.3 &rarr; 93.9<br>Type: Broad local growth</div>`)[0];
+                popup_ebbfc2e46fd9cef241b2f88ec604b26c.setContent(html_a27c1288f3ca9711db3a082a96d08004);
+            
+        
+
+        circle_marker_ba17246e20b1d69f67623161887e9552.bindPopup(popup_ebbfc2e46fd9cef241b2f88ec604b26c)
+        ;
+
+        
+    
+    
+            circle_marker_ba17246e20b1d69f67623161887e9552.bindTooltip(
+                `<div>
+                     #87 Renkapur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a13716d444e1628ab9d9dad372253a6 = L.circleMarker(
+                [13.5413, 76.0312],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_efbaf74b04ae58a3a2de7c5e2fc11ba1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b587182b6828ddd31e47c50ff59a9857 = $(`<div id="html_b587182b6828ddd31e47c50ff59a9857" style="width: 100.0%; height: 100.0%;"><b>#88 Mallappanahalli  (Rural)</b><br>Chikmagalur, Karnataka<br>Score 98.0 &middot; stability 45%<br>New built-up 13.2 ha<br>Total light 14.6 &rarr; 44.0<br>Type: Broad local growth</div>`)[0];
+                popup_efbaf74b04ae58a3a2de7c5e2fc11ba1.setContent(html_b587182b6828ddd31e47c50ff59a9857);
+            
+        
+
+        circle_marker_4a13716d444e1628ab9d9dad372253a6.bindPopup(popup_efbaf74b04ae58a3a2de7c5e2fc11ba1)
+        ;
+
+        
+    
+    
+            circle_marker_4a13716d444e1628ab9d9dad372253a6.bindTooltip(
+                `<div>
+                     #88 Mallappanahalli  (Rural)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e27d3f054844c4a24cbdee33aa3f91d6 = L.circleMarker(
+                [13.2678, 77.6653],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_a17468af5fb45108e4543f35cb7254c3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_14914285bb9c85a0c705348b472f4cc1 = $(`<div id="html_14914285bb9c85a0c705348b472f4cc1" style="width: 100.0%; height: 100.0%;"><b>#89 Lakshmipura</b><br>Bangalore Rural, Karnataka<br>Score 98.0 &middot; stability 43%<br>New built-up 42.2 ha<br>Total light 12.7 &rarr; 47.1<br>Type: Near a city</div>`)[0];
+                popup_a17468af5fb45108e4543f35cb7254c3.setContent(html_14914285bb9c85a0c705348b472f4cc1);
+            
+        
+
+        circle_marker_e27d3f054844c4a24cbdee33aa3f91d6.bindPopup(popup_a17468af5fb45108e4543f35cb7254c3)
+        ;
+
+        
+    
+    
+            circle_marker_e27d3f054844c4a24cbdee33aa3f91d6.bindTooltip(
+                `<div>
+                     #89 Lakshmipura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0dfb31303de4d5b9a8111da212d02a2 = L.circleMarker(
+                [22.5644, 76.4407],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_40fa1b6c1e15cb57285414ed0838175c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f44654346a225fcce7371440f349259a = $(`<div id="html_f44654346a225fcce7371440f349259a" style="width: 100.0%; height: 100.0%;"><b>#90 Borkhalya</b><br>Dewas, Madhya Pradesh<br>Score 98.0 &middot; stability 30%<br>New built-up 14.9 ha<br>Total light 9.6 &rarr; 57.0<br>Type: Broad local growth</div>`)[0];
+                popup_40fa1b6c1e15cb57285414ed0838175c.setContent(html_f44654346a225fcce7371440f349259a);
+            
+        
+
+        circle_marker_c0dfb31303de4d5b9a8111da212d02a2.bindPopup(popup_40fa1b6c1e15cb57285414ed0838175c)
+        ;
+
+        
+    
+    
+            circle_marker_c0dfb31303de4d5b9a8111da212d02a2.bindTooltip(
+                `<div>
+                     #90 Borkhalya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f27488370b076e1cb77543aa11eb414 = L.circleMarker(
+                [24.3533, 84.2858],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_f4835d099d52d90103670493018d13b0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_370b9d99eef295cda5e7b8d894eb7a86 = $(`<div id="html_370b9d99eef295cda5e7b8d894eb7a86" style="width: 100.0%; height: 100.0%;"><b>#91 Mahurawan</b><br>Palamu, Jharkhand<br>Score 97.9 &middot; stability 26%<br>New built-up 8.4 ha<br>Total light 1.7 &rarr; 9.9<br>Type: Broad local growth</div>`)[0];
+                popup_f4835d099d52d90103670493018d13b0.setContent(html_370b9d99eef295cda5e7b8d894eb7a86);
+            
+        
+
+        circle_marker_0f27488370b076e1cb77543aa11eb414.bindPopup(popup_f4835d099d52d90103670493018d13b0)
+        ;
+
+        
+    
+    
+            circle_marker_0f27488370b076e1cb77543aa11eb414.bindTooltip(
+                `<div>
+                     #91 Mahurawan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a596d838a840773fe29d042ff6e7555 = L.circleMarker(
+                [32.4273, 75.428],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_ff51075d869f2e3fa068a8a3c0e0159c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a6a8db42fcbc2b3f963824009b2346f6 = $(`<div id="html_a6a8db42fcbc2b3f963824009b2346f6" style="width: 100.0%; height: 100.0%;"><b>#92 Trihara</b><br>Kathua, Jammu and Kashmir<br>Score 97.9 &middot; stability 33%<br>New built-up 29.5 ha<br>Total light 23.5 &rarr; 93.2<br>Type: Near a city</div>`)[0];
+                popup_ff51075d869f2e3fa068a8a3c0e0159c.setContent(html_a6a8db42fcbc2b3f963824009b2346f6);
+            
+        
+
+        circle_marker_3a596d838a840773fe29d042ff6e7555.bindPopup(popup_ff51075d869f2e3fa068a8a3c0e0159c)
+        ;
+
+        
+    
+    
+            circle_marker_3a596d838a840773fe29d042ff6e7555.bindTooltip(
+                `<div>
+                     #92 Trihara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_992ea452b8c4ae34b3e92367bc924665 = L.circleMarker(
+                [11.9758, 76.9041],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_438c15cd57c7229cceb2322969bb5c99 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fb6d08568bc718fcc4ec85dd0b6ecca5 = $(`<div id="html_fb6d08568bc718fcc4ec85dd0b6ecca5" style="width: 100.0%; height: 100.0%;"><b>#93 Kellamballi</b><br>Chamarajanagar, Karnataka<br>Score 97.9 &middot; stability 22%<br>New built-up 136.8 ha<br>Total light 68.0 &rarr; 298.9<br>Type: Large project</div>`)[0];
+                popup_438c15cd57c7229cceb2322969bb5c99.setContent(html_fb6d08568bc718fcc4ec85dd0b6ecca5);
+            
+        
+
+        circle_marker_992ea452b8c4ae34b3e92367bc924665.bindPopup(popup_438c15cd57c7229cceb2322969bb5c99)
+        ;
+
+        
+    
+    
+            circle_marker_992ea452b8c4ae34b3e92367bc924665.bindTooltip(
+                `<div>
+                     #93 Kellamballi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b83845486453bd31ebbcb116f2d8ea2e = L.circleMarker(
+                [22.0674, 85.3711],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_5834b0f5119c1a8fce9add6d5564ed47 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_743a9f31fba73e9ff3871db148b2e614 = $(`<div id="html_743a9f31fba73e9ff3871db148b2e614" style="width: 100.0%; height: 100.0%;"><b>#94 Matiapasi</b><br>Kendujhar, Odisha<br>Score 97.9 &middot; stability 47%<br>New built-up 4.1 ha<br>Total light 2.2 &rarr; 25.6<br>Type: Near a city</div>`)[0];
+                popup_5834b0f5119c1a8fce9add6d5564ed47.setContent(html_743a9f31fba73e9ff3871db148b2e614);
+            
+        
+
+        circle_marker_b83845486453bd31ebbcb116f2d8ea2e.bindPopup(popup_5834b0f5119c1a8fce9add6d5564ed47)
+        ;
+
+        
+    
+    
+            circle_marker_b83845486453bd31ebbcb116f2d8ea2e.bindTooltip(
+                `<div>
+                     #94 Matiapasi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9decc2721745a55105777eb0855a6f49 = L.circleMarker(
+                [27.3721, 75.5024],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_de57ede400fe72bb7923e54716aedad2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6c961bdadf3d84140ae5c85b325bb393 = $(`<div id="html_6c961bdadf3d84140ae5c85b325bb393" style="width: 100.0%; height: 100.0%;"><b>#95 Charanwas Gangabishan Ka Bas</b><br>Sikar, Rajasthan<br>Score 97.9 &middot; stability 27%<br>New built-up 24.4 ha<br>Total light 10.8 &rarr; 35.6<br>Type: Broad local growth</div>`)[0];
+                popup_de57ede400fe72bb7923e54716aedad2.setContent(html_6c961bdadf3d84140ae5c85b325bb393);
+            
+        
+
+        circle_marker_9decc2721745a55105777eb0855a6f49.bindPopup(popup_de57ede400fe72bb7923e54716aedad2)
+        ;
+
+        
+    
+    
+            circle_marker_9decc2721745a55105777eb0855a6f49.bindTooltip(
+                `<div>
+                     #95 Charanwas Gangabishan Ka Bas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2006bc475a07872b2a7f19000420acbd = L.circleMarker(
+                [25.9707, 76.2517],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1baf7a", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_3a4b7e8771dc09e2947afb2e0eadbf32 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5bcf8e48793529ecfbde8763b203ac2b = $(`<div id="html_5bcf8e48793529ecfbde8763b203ac2b" style="width: 100.0%; height: 100.0%;"><b>#96 Jaisapura</b><br>Sawai Madhopur, Rajasthan<br>Score 97.9 &middot; stability 24%<br>New built-up 34.4 ha<br>Total light 15.4 &rarr; 85.0<br>Type: Broad local growth</div>`)[0];
+                popup_3a4b7e8771dc09e2947afb2e0eadbf32.setContent(html_5bcf8e48793529ecfbde8763b203ac2b);
+            
+        
+
+        circle_marker_2006bc475a07872b2a7f19000420acbd.bindPopup(popup_3a4b7e8771dc09e2947afb2e0eadbf32)
+        ;
+
+        
+    
+    
+            circle_marker_2006bc475a07872b2a7f19000420acbd.bindTooltip(
+                `<div>
+                     #96 Jaisapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b33ef90ff486dfff767553424a959f71 = L.circleMarker(
+                [32.4752, 75.4335],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_360e51ae607dd064dc5352c643a8aeaf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_84948ee36fee0995ab51a6f87a9ebfdd = $(`<div id="html_84948ee36fee0995ab51a6f87a9ebfdd" style="width: 100.0%; height: 100.0%;"><b>#97 Merth</b><br>Kathua, Jammu and Kashmir<br>Score 97.9 &middot; stability 28%<br>New built-up 50.0 ha<br>Total light 20.4 &rarr; 78.9<br>Type: Near a city</div>`)[0];
+                popup_360e51ae607dd064dc5352c643a8aeaf.setContent(html_84948ee36fee0995ab51a6f87a9ebfdd);
+            
+        
+
+        circle_marker_b33ef90ff486dfff767553424a959f71.bindPopup(popup_360e51ae607dd064dc5352c643a8aeaf)
+        ;
+
+        
+    
+    
+            circle_marker_b33ef90ff486dfff767553424a959f71.bindTooltip(
+                `<div>
+                     #97 Merth
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8234e8c5b896aeffe2a3de411a336de9 = L.circleMarker(
+                [13.2277, 77.7603],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_1878af612cbc289c5e042dd1680c2967 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_aee285cb90cc40c1fcb451afa114d795 = $(`<div id="html_aee285cb90cc40c1fcb451afa114d795" style="width: 100.0%; height: 100.0%;"><b>#98 Polanahalli</b><br>Bangalore Rural, Karnataka<br>Score 97.9 &middot; stability 36%<br>New built-up 37.1 ha<br>Total light 32.0 &rarr; 190.1<br>Type: Near a city</div>`)[0];
+                popup_1878af612cbc289c5e042dd1680c2967.setContent(html_aee285cb90cc40c1fcb451afa114d795);
+            
+        
+
+        circle_marker_8234e8c5b896aeffe2a3de411a336de9.bindPopup(popup_1878af612cbc289c5e042dd1680c2967)
+        ;
+
+        
+    
+    
+            circle_marker_8234e8c5b896aeffe2a3de411a336de9.bindTooltip(
+                `<div>
+                     #98 Polanahalli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_486fe04c41b6d31a3a1c574cbc07c591 = L.circleMarker(
+                [12.5371, 78.0236],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#eb6834", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_3fd740fbebec7912bded2d57bc620cfc = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b97a70215ccc7273428e89fba8708937 = $(`<div id="html_b97a70215ccc7273428e89fba8708937" style="width: 100.0%; height: 100.0%;"><b>#99 Pillari Agraharam</b><br>Krishnagiri, Tamil Nadu<br>Score 97.9 &middot; stability 42%<br>New built-up 201.6 ha<br>Total light 82.4 &rarr; 1416.1<br>Type: Large project</div>`)[0];
+                popup_3fd740fbebec7912bded2d57bc620cfc.setContent(html_b97a70215ccc7273428e89fba8708937);
+            
+        
+
+        circle_marker_486fe04c41b6d31a3a1c574cbc07c591.bindPopup(popup_3fd740fbebec7912bded2d57bc620cfc)
+        ;
+
+        
+    
+    
+            circle_marker_486fe04c41b6d31a3a1c574cbc07c591.bindTooltip(
+                `<div>
+                     #99 Pillari Agraharam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_04b9091bd0f722889297d15ed170a4a0 = L.circleMarker(
+                [32.4683, 75.4379],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a78d6", "fillOpacity": 0.95, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_4e298cce738bcfc6fa558b546384377e);
+        
+    
+        var popup_a3f75dc79d3655d702fa136c312ca318 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_88220b050f24861fb4a0893a1abb1f05 = $(`<div id="html_88220b050f24861fb4a0893a1abb1f05" style="width: 100.0%; height: 100.0%;"><b>#100 Nagrota</b><br>Kathua, Jammu and Kashmir<br>Score 97.9 &middot; stability 42%<br>New built-up 87.4 ha<br>Total light 27.8 &rarr; 122.8<br>Type: Near a city</div>`)[0];
+                popup_a3f75dc79d3655d702fa136c312ca318.setContent(html_88220b050f24861fb4a0893a1abb1f05);
+            
+        
+
+        circle_marker_04b9091bd0f722889297d15ed170a4a0.bindPopup(popup_a3f75dc79d3655d702fa136c312ca318)
+        ;
+
+        
+    
+    
+            circle_marker_04b9091bd0f722889297d15ed170a4a0.bindTooltip(
+                `<div>
+                     #100 Nagrota
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
