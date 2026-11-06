@@ -49,13 +49,12 @@ scripts/
   01_prepare_gee_upload.py   clean, key, flag towns, simplify
   02_extract_gee.py          per-village land cover + night lights in Google Earth Engine
   03_score_villages.py       exclusions, signals, scoring, ranking, flags
-  04_visualise.py            static and interactive maps of the top 100
+  04_visualise.py            map of the top 100
   05_build_presentation.py   builds the slide deck from the outputs
 data/output/
   top100_villages.csv        final ranked top 100 with scores and attributes
   villages_scored.csv.gz     all 648,372 polygons with signals, score, flags
-  top100_map.png             static map
-  top100_map.html            interactive map (open in a browser)
+  top100_map.png             map of the top 100 by growth type
 presentation/
   Village_Economic_Growth_Top100.pptx
 docs/
